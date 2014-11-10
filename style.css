@@ -192,8 +192,7 @@ img{
     }
         .appbutton img{
             cursor:pointer;
-            width:40px;
-            height:40px;
+            width:2vw;
             margin:5px;
         }
     #title{
@@ -214,7 +213,7 @@ img{
     }
         #settings img{
             cursor:pointer;
-            width:100%;
+            width:2vw;
             margin:5px;
             display:block;
         }
