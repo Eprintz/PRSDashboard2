@@ -198,7 +198,7 @@ img{
         }
     #title{
         display:inline-block;
-        font-size:80px;
+        font-size:5vw;
         color:black;
         margin-top:10px;
     }
@@ -214,8 +214,7 @@ img{
     }
         #settings img{
             cursor:pointer;
-            width:40px;
-            height:40px;
+            width:100%;
             margin:5px;
             display:block;
         }
@@ -296,7 +295,7 @@ img{
         float:left;
     }
         #calendartitle{
-            font-size:30px;
+            font-size:2.4vw;
             padding:4px;
             box-sizing:border-box;
         }
@@ -312,6 +311,7 @@ img{
             width:12%;
             margin:0.5%;
             height:40px;
+            font-size:1vw;
             border-radius:2px;
             display:inline-block;
             font-weight:bold;
@@ -343,7 +343,7 @@ img{
         box-sizing:border-box;
     }
         #taskstitle{
-            font-size:40px;
+            font-size:2vw;
         }
         #createdtasks{
             max-height:265px;
@@ -351,7 +351,7 @@ img{
         .task{
             width:100%;
             display:inline-block;
-            font-size:24px;
+            font-size:1vw;
             box-sizing:border-box;
             text-align:left;
             
@@ -360,7 +360,7 @@ img{
                 cursor:pointer;
                 transition:0.3s ease-out;
                 text-align:center;
-                font-size:24px;
+                font-size:1.2vw;
                 box-sizing:border-box;
                 text-align:center;
                 position:relative;
