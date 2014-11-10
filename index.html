@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRS Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Roboto'rel='stylesheet' type='text/css'>
+<script src="/Plugins/jquery-2.1.1.min.js"></script>
+<script src="database.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet"href="style.css">
+    </head>
+    <body>
+    <div id="appoverlay">
+        <div class="appbutton">
+            <img src="Pictures/menu-48.png">
+        </div>
+    </div>
+<!--Settings-->
+    <div class="bar"id="settingsbar">
+        <textarea class='taskname'placeholder='Username'id="l1"></textarea>
+        <textarea class='taskname'placeholder='Password'id="l2"></textarea>
+        <div class="submit"id="loginsubmit">Login</div>
+        <div id="classsettings">
+        <!--Settings Table-->
+            <table>
+                <tr>
+                    <td class="periodnumber">1</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn1"maxlength="7">                               </textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc1"maxlength="10">                                </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodnumber">2</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn2"maxlength="7"></textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc2"maxlength="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodnumber">3</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn3"maxlength="7"></textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc3"maxlength="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodnumber">4</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn4"maxlength="7">                                </textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc4"maxlength="10">                                </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodnumber">5</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn5"maxlength="7">                                </textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc5"maxlength="10">                                </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodnumber">6</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn6"maxlength="7">                                </textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc6"maxlength="10">                                </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodnumber">7</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn7"maxlength="7">                                </textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc7"maxlength="10">                                </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodnumber">8</td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Class1"id="cn8"maxlength="7">                                </textarea>
+                    </td>
+                    <td class="classnameinput">
+                        <textarea placeholder="Color"id="cc8"maxlength="10">                                </textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="submit"id="settingssubmit">Save</div>
+        </div>
+    </div>
+    <div id="body">
+<!--Header-->
+        <div id="header">
+            <div class="appbutton">
+                <img src="Pictures/menu-48.png">
+            </div>
+            <div id="title">Pacific Ridge Dashboard</div>
+                <div id="date"></div>
+            <div id="settings">
+                <img src="Pictures/settings-48.png">
+            </div>
+        </div>
+<!--Class List Cards-->
+        <div id="dayview">
+            <div id="daybar">
+                <div class="period"id="period1"></div>
+                <div class="period"id="period2"></div>
+                <div class="period"id="period3"></div>
+                <div class="period"id="period4"></div>
+                <div class="period"id="period5"></div>
+                <div class="period"id="period6"></div>
+                <div class="period"id="period7"></div>
+                <div class="period"id="period8"></div>
+            </div>
+            <div id="classlist">
+                <div class="class"id="class1">
+                    <div class="classheader"id="ch1"></div>
+                    <span class="title" id="t1"></span>
+                    <br>Period 1<br>8:00-9:25<br>
+                </div>
+                <div class="class"id="class2">
+                    <div class="classheader"id="ch2"></div>
+                    <span class="title" id="t2"></span>
+                    <br>Period 2<br>8:00-9:25<br>
+                </div>
+                <div class="class"id="class3">
+                    <div class="classheader"id="ch3"></div>
+                    <span class="title" id="t3"></span>
+                    <br>Period 3<br>9:30-11:00<br>
+                </div>
+                <div class="class"id="class4">
+                    <div class="classheader"id="ch4"></div>
+                    <span class="title" id="t4"></span>
+                    <br>Period 4<br>9:30-11:00<br>
+                </div>
+                <div class="class"id="class5">
+                    <div class="classheader"id="ch5"></div>
+                    <span class="title" id="t5"></span>
+                    <br>Period 5<br>12:00-1:25<br>
+                </div>
+                <div class="class"id="class6">
+                    <div class="classheader"id="ch6"></div>
+                    <span class="title" id="t6"></span>
+                    <br>Period 6<br>12:00-1:25<br>
+                </div>
+                <div class="class"id="class7">
+                    <div class="classheader"id="ch7"></div>
+                    <span class="title" id="t7"></span>
+                    <br>Period 7<br>1:25-3:00<br>
+                </div>
+                <div class="class"id="class8">
+                    <div class="classheader"id="ch8"></div>
+                    <span class="title" id="t8"></span>
+                    <br>Period 8<br>1:25-3:00<br>
+                </div>
+            </div>
+<!--Calendar-->
+        <div id="calendarsection">
+            <div id="calendar">
+                <div id="calendartitle"></div>
+                    <div class="calendardayname"id="cdn1">Sunday</div>
+                    <div class="calendardayname"id="cdn2">Monday</div>
+                    <div class="calendardayname"id="cdn3">Tuesday</div>
+                    <div class="calendardayname"id="cdn4">Wednesday</div>
+                    <div class="calendardayname"id="cdn5">Thursday</div>
+                    <div class="calendardayname"id="cdn6">Friday</div>
+                    <div class="calendardayname"id="cdn7">Saturday</div>
+                    <div class="calendarday"id="cd1"></div>
+                    <div class="calendarday"id="cd2"></div>
+                    <div class="calendarday"id="cd3"></div>
+                    <div class="calendarday"id="cd4"></div>
+                    <div class="calendarday"id="cd5"></div>
+                    <div class="calendarday"id="cd6"></div>
+                    <div class="calendarday"id="cd7"></div>
+                    <div class="calendarday"id="cd8"></div>
+                    <div class="calendarday"id="cd9"></div>
+                    <div class="calendarday"id="cd10"></div>
+                    <div class="calendarday"id="cd11"></div>
+                    <div class="calendarday"id="cd12"></div>
+                    <div class="calendarday"id="cd13"></div>
+                    <div class="calendarday"id="cd14"></div>
+                    <div class="calendarday"id="cd15"></div>
+                    <div class="calendarday"id="cd16"></div>
+                    <div class="calendarday"id="cd17"></div>
+                    <div class="calendarday"id="cd18"></div>
+                    <div class="calendarday"id="cd19"></div>
+                    <div class="calendarday"id="cd20"></div>
+                    <div class="calendarday"id="cd21"></div>
+                    <div class="calendarday"id="cd22"></div>
+                    <div class="calendarday"id="cd23"></div>
+                    <div class="calendarday"id="cd24"></div>
+                    <div class="calendarday"id="cd25"></div>
+                    <div class="calendarday"id="cd26"></div>
+                    <div class="calendarday"id="cd27"></div>
+                    <div class="calendarday"id="cd28"></div>
+                    <div class="calendarday"id="cd29"></div>
+                    <div class="calendarday"id="cd30"></div>
+                    <div class="calendarday"id="cd31"></div>
+                    <div class="calendarday"id="cd32"></div>
+                    <div class="calendarday"id="cd33"></div>
+                    <div class="calendarday"id="cd34"></div>
+                    <div class="calendarday"id="cd35"></div>
+            </div>
+            <div id='tasks'>
+                <div id='taskstitle'>Tasks</div>
+                <div id='createdtasks'></div>
+                <div id='newtask'>
+                    Create New Task
+                    <img src='Pictures/plus-48.png'></div>
+            </div>
+        </div>
+<!--Apps Section-->
+        <div id="appssection">
+            
+        </div>
+        </div>
+    </div>
+    </body>     
+</html>
