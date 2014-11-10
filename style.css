@@ -254,8 +254,7 @@ img{
         width:auto;   
     }
         .class{
-            width:160px;
-            height:160px;
+            width:8%;
             background-color:white;
             display:inline-block;
             margin:15px;
@@ -263,19 +262,21 @@ img{
             transition:0.5s ease-out;
             border-radius:4px;
             padding:10px;
+            font-size:1vw;
             box-sizing:border-box;
             text-align:left;
-            font-size:20px;
             box-shadow: 0px 0px 8px darkgrey;
         }
             .classheader{
-                width:160px;
                 border-top-left-radius:4px;
                 border-top-right-radius:4px;
                 height:20px;
                 margin:-10px;
                 margin-bottom:10px;
                 background-color:black;
+            }
+            .class .title{
+                font-size:1.5vw;
             }
 /*------------------------------------------------*/
 /*Calendar*/

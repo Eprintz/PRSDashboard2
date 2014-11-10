@@ -24,7 +24,7 @@ var username = "Login";
 				}
 			});
 		}
-$(document).on('click','#createsubmit',function(){
+$(document).on('click','#loginsubmit',function(){
         var username = $("#lt3").val();
 		var password = $("#lt4").val();
 		if(username !== "" && password !== ""){
@@ -32,7 +32,7 @@ $(document).on('click','#createsubmit',function(){
 			$("#loginbox").remove();
 		}
 		else{
-			$("#createsubmit").css("background-color","red");
+			$("#loginsubmit").css("background-color","red");
 		}
 	});
  //Variable Declaration
