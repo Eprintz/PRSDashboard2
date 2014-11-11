@@ -27,12 +27,15 @@ var settingsbaractive = 0;
             $("#body").animate({marginRight:'240px'}, "300");
             $("#settingsbar").animate({opacity:'1'}, "300");
             $("#settings").animate({marginRight:'240px'}, "100");
+            $("#settings").css("transform","rotate(270deg)");
+            
             settingsbaractive+=1;
         }
         else{
             $("#body").animate({marginRight:'0px'}, "300");
             $("#settingsbar").animate({opacity:'0'}, "300");
             $("#settings").animate({marginRight:'0px'}, "100");
+            $("#settings").css("transform","rotate(0deg)");
             setTimeout(function(){
                 $("#settingsbar").css("display","none");
             }, 300);
