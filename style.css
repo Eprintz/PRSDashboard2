@@ -147,7 +147,7 @@ img{
 /*------------------------------------------------*/
 /*Settings*/
     #classsettings{
-        font-size:20px;
+        font-size:100%;
     }
         #classsettings table{
             width:100%;
@@ -156,7 +156,7 @@ img{
             border:0px;
             background-color:transparent;
             font-family:"Roboto",sans-serif;
-            font-size:18px;
+            font-size:100%;
             border: none;
             outline: none;
             -webkit-box-shadow: none;
@@ -166,7 +166,7 @@ img{
             width:100%;
             resize:none;
             overflow:hidden;
-            padding-top:28px;
+            padding-top:3.9vh;
         }
 #body{
     
