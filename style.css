@@ -79,10 +79,11 @@ img{
 				transition:0.4s;
             }
             #createbutton{
-                cursor:pointer;  
+                cursor:pointer;
+                color: #616161;
             }
             #createbutton:hover{
-                font-weight: bold;
+                color: black;
             }
 /*------------------------------------------------*/
 /*Right Bar+Apps overlay*/
@@ -171,9 +172,6 @@ img{
             overflow:hidden;
             padding-top:3.9vh;
         }
-#body{
-    
-}
 /*------------------------------------------------*/
 /*Header*/
 .title{
