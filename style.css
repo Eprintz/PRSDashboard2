@@ -99,10 +99,9 @@ img{
         z-index:100;
     }
     #app{
-        position: relative;
-        top: 1vh;
+        margin-top: 1vh;
         float: left;
-        left: 3vw;
+        margin-left: 3vw;
         cursor: pointer;
     }
         .applist{
