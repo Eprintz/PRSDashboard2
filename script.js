@@ -140,3 +140,6 @@ $("#al2").click(function(){
             getcalcnumber();
         });
 });
+$("#app").click(function() {
+    $("#calculator").show();
+});
