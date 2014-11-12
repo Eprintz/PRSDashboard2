@@ -98,6 +98,13 @@ img{
         display:none;
         z-index:100;
     }
+    #app{
+        position: relative;
+        top: 1vh;
+        float: left;
+        left: 3vw;
+        cursor: pointer;
+    }
         .applist{
             font-size:30px;
             height:40px;
