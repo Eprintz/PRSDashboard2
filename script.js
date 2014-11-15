@@ -138,3 +138,6 @@ $("#divide").click(function(){
 getcalcnumber();
 });
 });
+$("#X").click(function(){
+    $(".clac").hide(fast);
+});
