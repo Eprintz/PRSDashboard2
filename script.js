@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $(".clac").addClass("none");
+    $("#calculator").addClass("none");
 //Overall Webpage Buttons On Click
 var appoverlayactive = 0;
 $(".appbutton").click(function(){
@@ -137,7 +139,19 @@ getcalcnumber();
 $("#divide").click(function(){
 getcalcnumber();
 });
-});
 $("#X").click(function(){
-    $(".clac").hide(fast);
+    $(".clac").addClass("none");
+    $("#calculator").addClass("none");
+});
+$("#calcIcon").click(function(){
+    $(".clac").removeClass("none");
+    $("#calculator").removeClass("none");
+    $("#appoverlay").animate({opacity:'0'}, "300");
+$("#appoverlay").animate({opacity:'0'}, "300");
+$(".appbutton").css("transform","rotate(0deg)");
+setTimeout(function(){
+$("#appoverlay").css("display","none");
+}, 300);
+appoverlayactive -=1;
+});
 });

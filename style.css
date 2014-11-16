@@ -97,7 +97,7 @@ img{
     display:none;
     z-index:100;
 }
-#app{
+.icon{
     margin-top: 3vh;
     float: left;
     margin-left: 4vw;
@@ -412,36 +412,36 @@ form input{
 }
 #number{
     background-color: #E0E0E0;
-    width: 3em;
-    height: 3em;
+    width: 2.55vw;
+    height: 3vh;
     cursor: pointer;
 }
 #toprow{
     background-color: #C9C9C9;
-    width: 3em;
-    height: 3em;
+    width: 2.55vw;
+    height: 3vh;
     display: inline-block;
     cursor: pointer;
 }
 #zero{
     background-color: #E0E0E0;
     word-spacing: 0;
-    width: 6.365em;
-    height: 3em;
+    width: 5.4vw;
+    height: 3vh;
     cursor: pointer;
 }
 #operator{
     background-color: #3A95F7;
     word-spacing: 0;
-    width: 3em;
-    height: 3em;
+    width: 2.55vw;
+    height: 3vh;
     cursor: pointer;
 }
 #input{
     background-color: #3A3B3B;
     opacity: .5;
     width: 19.7vw;
-    height: 3em;
+    height: 3vh;
     border: 1px solid grey;
     color: white;
     border-top-left-radius: 5px; 
@@ -449,35 +449,39 @@ form input{
 }
 #calculator{
     border: 1px solid black;
-    width: 20vw;
+    width: 20.02vw;
     border-radius: 5px;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     bottom: 50vh;
+    height: 20.6vh;
 }
  #left{
      background-color: #C9C9C9;
-     width: 3em;
-     height: 3em;
+     width: 2.55vw;
+     height: 3vh;
      text-align: center;
      cursor: pointer;
  }
 #Bksp{
     background-color: #C9C9C9;
-    width: 6.365em;
-    height: 3em;
+    width: 5.41vw;
+    height: 3vh;
     text-align: center;
     cursor: pointer;
+}
+.none{
+    display: none;
 }
 #X{
     height: 3vh;
     position: relative;
-    bottom: 79vh;
-    left: 10vw;
+    left: 10.1vw;
     background-color: #EDEDED;
     border-radius: 100%;
     cursor: pointer;
+    bottom: 21.5vh;
     /*display: none;*/
 }

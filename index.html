@@ -44,9 +44,9 @@
         </head>
         <body>
             <div id="appoverlay">
-                <img id="app" class="calcIcon" src="Pictures/calculator-48.png">
-                <img id="app" src="Pictures/calendar-48.png">
-                <img id="app" src="Pictures/contacts-48.png">
+                <img id="calcIcon" class="icon" src="Pictures/calculator-48.png">
+                <img class="icon" src="Pictures/calendar-48.png">
+                <img class="icon" src="Pictures/contacts-48.png">
                 <div class="appbutton">
                     <img src="Pictures/menu-48.png">
                 </div>
@@ -291,15 +291,15 @@ onClick="document.calculator.text.value=''">
 <INPUT TYPE=BUTTON id="operator" class="clac" VALUE="+" NAME="add"
 onClick="document.calculator.text.value+='+'">
     <br>
-<INPUT TYPE=BUTTON id="left" style="border-bottom-left-radius: 5px;" class="clac" VALUE="|x|" class="bottom-left" NAME="absolute" onClick="document.calculator.text.value=Math.abs(document.calculator.text.value)">
+<INPUT TYPE=BUTTON id="left" style="border-bottom-left-radius: 5px;" class="clac" VALUE="|x|" NAME="absolute" onClick="document.calculator.text.value=Math.abs(document.calculator.text.value)">
 <INPUT TYPE="BUTTON" id="left" class="clac" VALUE="1/x" NAME="reciprocal" onClick="recip(document.calculator.text.value)">
 <INPUT TYPE=BUTTON id="left" class="clac" VALUE="rand" NAME="random" onClick="document.calculator.text.value = getRandom()">
 <INPUT TYPE=BUTTON id="zero" class="clac" VALUE="0" NAME="but0" onClick="document.calculator.text.value+='0'">
 <INPUT TYPE=BUTTON id="number" class="clac" VALUE="." NAME="decimal" onClick="document.calculator.text.value+='.'">
 <INPUT TYPE=BUTTON id="operator" style="border-bottom-right-radius: 5px;" class="clac" VALUE="=" class="bottom-right" NAME="equals" onClick="document.calculator.text.value=eval(document.calculator.text.value)">
 </FORM>
+    <img id="X" src="Pictures/close-48.png">
     </div>
-<img id="X" src="Pictures/close-48.png">
                     </div>
                 </div>
             </div>
