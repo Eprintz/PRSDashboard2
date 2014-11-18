@@ -84,6 +84,18 @@ img{
 #createbutton:hover{
     color: black;
 }
+.notification{
+    height:1.75vw;
+    width:1.75vw;
+    border-bottom-left-radius:1.75vw;
+    text-align:center;
+    box-sizing:border-box;
+    padding-left:0.7vw;
+    padding-top:0.1vw;
+    float:right;
+    font-size:1.2vw;
+    color:white;
+}
 /*------------------------------------------------*/
 /*Right Bar+Apps overlay*/
 #appoverlay{
