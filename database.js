@@ -66,6 +66,15 @@ $(document).on('click','#loginsubmit',function(){
         $("#ch6").css("background-color",colors[5]);
         $("#ch7").css("background-color",colors[6]);
         $("#ch8").css("background-color",colors[7]);
+        
+        $("#n1").css("background-color",colors[0]);
+        $("#n2").css("background-color",colors[1]);
+        $("#n3").css("background-color",colors[2]);
+        $("#n4").css("background-color",colors[3]);
+        $("#n5").css("background-color",colors[4]);
+        $("#n6").css("background-color",colors[5]);
+        $("#n7").css("background-color",colors[6]);
+        $("#n8").css("background-color",colors[7]);
 
         $("#period1").css("background-color",colors[0]);
         $("#period2").css("background-color",colors[1]);
