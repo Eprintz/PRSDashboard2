@@ -1,4 +1,3 @@
-$(document).ready(function() {
     function getPi() 
                 {return Math.PI}
 
@@ -29,4 +28,3 @@ $(document).ready(function() {
 
                     document.calculator.text.value = Math.pow(x,y)
                 }
-});
