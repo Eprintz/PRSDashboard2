@@ -12,7 +12,7 @@ var username = "Login";
 			var createformon = 0;
 			$("#createbutton").click(function(){
 				if(createformon==0){
-				$("#loginbox").animate({height:"660px",marginBottom:"-340px"},"fast");
+				$("#loginbox").animate({height:"540px",marginBottom:"-220px"},"fast");
 				$("#loginbox").append
 				('<form id="createform"><textarea class="logintext"id="lt3"placeholder="Username"></textarea><textarea class="logintext"id="lt4"placeholder="Password"></textarea><div id="createsubmit"class="submit">Create</div></form>');
 					createformon+=1;	
@@ -68,13 +68,37 @@ $(document).on('click','#loginsubmit',function(){
         $("#ch8").css("background-color",colors[7]);
         
         $("#n1").css("background-color",colors[0]);
+            if($("#n1").html()==""){
+                $("#n1").css("background-color","transparent");
+            }
         $("#n2").css("background-color",colors[1]);
+            if($("#n2").html()==""){
+                $("#n2").css("background-color","transparent");
+            }
         $("#n3").css("background-color",colors[2]);
+            if($("#n3").html()==""){
+                $("#n3").css("background-color","transparent");
+            }
         $("#n4").css("background-color",colors[3]);
+            if($("#n4").html()==""){
+                $("#n4").css("background-color","transparent");
+            }
         $("#n5").css("background-color",colors[4]);
+            if($("#n5").html()==""){
+                $("#n5").css("background-color","transparent");
+            }
         $("#n6").css("background-color",colors[5]);
+            if($("#n6").html()==""){
+                $("#n6").css("background-color","transparent");
+            }
         $("#n7").css("background-color",colors[6]);
+            if($("#n7").html()==""){
+                $("#n7").css("background-color","transparent");
+            }
         $("#n8").css("background-color",colors[7]);
+            if($("#n8").html()==""){
+                $("#n8").css("background-color","transparent");
+            }
 
         $("#period1").css("background-color",colors[0]);
         $("#period2").css("background-color",colors[1]);
