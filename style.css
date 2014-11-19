@@ -4,7 +4,11 @@ html,body,*{
     font-family:"Roboto",sans-serif;
 }
 html,body{
-    background-image:url(/PRSDashboard2-master/Pictures/background.jpg);
+  background: url(Pictures/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     background-height:100vh;
     text-align:center;
 }
