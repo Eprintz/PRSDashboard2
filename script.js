@@ -26,7 +26,7 @@ $("#settings").click(function(){
         if(settingsbaractive == 0){
             $("#settingsbar").css("display","block");
             $("#settingsbar").animate({opacity:'1'}, "300");
-            $("#settings").animate({marginRight:'15vw'}, "100");
+            $("#settings").animate({marginRight:'14.5vw'}, "100");
             settingsbaractive+=1;
         }
         else{
