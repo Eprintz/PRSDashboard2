@@ -4,11 +4,7 @@ html,body,*{
     font-family:"Roboto",sans-serif;
 }
 html,body{
-  background: url(Pictures/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-image:url(/PRSDashboard2-master/Pictures/background.jpg);
     background-height:100vh;
     text-align:center;
 }
@@ -390,24 +386,29 @@ img{
 #newtask:active{
     background-color:darkgrey;
 }
+.selector{
+    float:left;
+    width:20px;
+    height:36px;
+    background-color:red;
+    margin-left:-25px;
+}
 #newtask img{
     float:right;
-    margin:5px;
     height:1.25vw;
     position:absolute;
     right:0px;
 }
 .color{
-    width:5px;
-    height:36px;
-    background-color:#0099FF;
+    width:0.3vw;
+    height:1.5vw;
+    background-color:black;
     float:left;
 }
 .taskname{
-    width:calc(100% - 5px);
-    height:36px;
     resize:none;
-    font-size:24px;
+    height:1.6vw;
+    font-size:1.2vw;
     font-family:"Roboto",sans-serif;
     float:left;
     border:none;
