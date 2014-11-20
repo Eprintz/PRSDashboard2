@@ -39,6 +39,7 @@ $(document).on('click','#loginsubmit',function(){
     var date = new Date();
         var improveddate=date.getDay()+2;
     var usergrade = 9;
+    var usercolor = "black";
     var daytype = "odd";
     var dayevents = "none";
     var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
@@ -47,6 +48,25 @@ $(document).on('click','#loginsubmit',function(){
 //Applying Variables
     $("#date").append(monthNames[date.getMonth()]+" "+improveddate+" "+date.getFullYear());
         $("#calendartitle").html(monthNames[date.getMonth()]);
+    var createdtasks = 0;
+    var colorid = 1;
+    $("#newtask").click(function(){
+        $("#createdtasks").append
+        ("<div class='task'><div class='color'id='c"+colorid+"'></div><textarea class='taskname'placeholder='Task Title'></textarea></div>");
+        createdtasks+=1;
+        colorid+=1;
+        if(createdtasks==7){
+            $("#createdtasks").css("overflow-y","scroll");
+        }
+    });
+    $(document).on("mouseenter",".color",function(){
+        $("#"+this.id).html("<div class='selector'id='s"+this.id+"'></div>");
+        
+    });
+    $(document).on("mouseleave",".color",function(){
+        $("#"+this.id).html("");
+        
+    });
      function redotopbar(){   
          
         $("#t1").html(periods[0]);
