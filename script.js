@@ -26,7 +26,7 @@ $("#settings").click(function(){
         if(settingsbaractive == 0){
             $("#settingsbar").css("display","block");
             $("#settingsbar").animate({opacity:'1'}, "300");
-            $("#settings").animate({marginRight:'14.5vw'}, "100");
+            $("#settings").animate({marginRight:'14.2vw'}, "100");
             settingsbaractive+=1;
         }
         else{
@@ -78,15 +78,6 @@ calcactive=0;
 }
 });
 //Creates tasks upon task add button click
-var createdtasks = 0;
-$("#newtask").click(function(){
-$("#createdtasks").append
-("<div class='task'><div class='color'id='c1'></div><textarea class='taskname'placeholder='Task Title'></textarea></div>");
-createdtasks+=1;
-if(createdtasks==7){
-$("#createdtasks").css("overflow-y","scroll");
-}
-});
 //Calculator Code
 var calcnumber = 0;
 var activenumber = 0;
