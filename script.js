@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function (){
     $(".clac").addClass("none");
     $("#calculator").addClass("none");
 //Overall Webpage Buttons On Click

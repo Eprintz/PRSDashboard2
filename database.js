@@ -210,8 +210,12 @@ $(document).on('click','#loginsubmit',function(){
     });
     if(Number(date.getHours())>18){
         $("body").addClass("night");
+        $("#title").css("color","white");
+        $("#date").css("color","white");
     }
     else{
         $("body").removeClass("night");
+        $("#title").css("color","black");
+        $("#date").css("color","black");
     }
 });
