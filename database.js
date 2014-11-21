@@ -43,7 +43,7 @@ $(document).on('click','#loginsubmit',function(){
     var daytype = "odd";
     var dayevents = "none";
     var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-    var periods = ["Math", "Spanish", "English", "History",  "SL/Clubs", "PE", "Design", "Biology"];
+    var periods = ["Class1", "Class2", "Class3", "Class4",  "Class5", "Class6", "Class7", "Class8"];
     var colors = ["Orange", "Red", "Green", "Purple", "Teal", "Grey", "Brown", "Darkblue"];
 //Applying Variables
     $("#date").append(monthNames[date.getMonth()]+" "+improveddate+" "+date.getFullYear());
