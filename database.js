@@ -37,7 +37,7 @@ $(document).on('click','#loginsubmit',function(){
 	});
  //Variable Declaration
     var date = new Date();
-        var improveddate=date.getDay()+2;
+    var improveddate = date.getDate();
     var usergrade = 9;
     var usercolor = "black";
     var daytype = "odd";
