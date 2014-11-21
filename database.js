@@ -208,4 +208,10 @@ $(document).on('click','#loginsubmit',function(){
             redotopbar();
         });
     });
+    if(Number(date.getHours())>18){
+        $("body").addClass("night");
+    }
+    else{
+        $("body").removeClass("night");
+    }
 });

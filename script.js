@@ -26,7 +26,15 @@ $("#settings").click(function(){
         if(settingsbaractive == 0){
             $("#settingsbar").css("display","block");
             $("#settingsbar").animate({opacity:'1'}, "300");
+<<<<<<< Updated upstream
             $("#settings").animate({marginRight:'14.2vw'}, "100");
+=======
+<<<<<<< Updated upstream
+            $("#settings").animate({marginRight:'14.5vw'}, "100");
+=======
+            $("#settings").animate({marginRight:'20vw'}, "100");
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
             settingsbaractive+=1;
         }
         else{
@@ -142,4 +150,5 @@ $("#appoverlay").css("display","none");
 }, 300);
 appoverlayactive -=1;
 });
+    
 });

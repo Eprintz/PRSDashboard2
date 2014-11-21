@@ -4,16 +4,12 @@ html,body,*{
     font-family:"Roboto",sans-serif;
 }
 html,body{
-  background: url(Pictures/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(Pictures/background.jpg);
     background-height:100vh;
     text-align:center;
 }
 .night{
-    background: url(Pictures/background.jpg) no-repeat center center fixed; 
+    background: url(http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2010/09/PacRidge8-537x429.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
