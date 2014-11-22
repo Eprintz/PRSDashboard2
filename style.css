@@ -112,7 +112,7 @@ img{
     position:absolute;
     right:0px;
     left:0px;
-    width:100vw;
+    width:10vw;
     height:139.99vh;
     background-color:rgba(255,255,255,0.95);
     opacity:0;
@@ -120,10 +120,10 @@ img{
     z-index:100;
 }
 .icon{
-    margin-top: 3vh;
-    float: left;
-    margin-left: 4vw;
+    margin-top: 5vh;
+    margin-left: 2.75vw;
     cursor: pointer;
+    display: block;
 }
 .applist{
     font-size:30px;
