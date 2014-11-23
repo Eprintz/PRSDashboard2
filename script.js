@@ -129,6 +129,7 @@ $("#divide").click(function(){
 getcalcnumber();
 });
 $("#X").click(function(){
+    $(this).addClass("none");
     $(".clac").addClass("none");
     $("#calculator").addClass("none");
 });
