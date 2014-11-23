@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $(".clac").addClass("none");
     $("#calculator").addClass("none");
+    $("#X").addClass("none")
 //Overall Webpage Buttons On Click
 var appoverlayactive = 0;
 $(".appbutton").click(function(){
@@ -134,6 +135,7 @@ $("#X").click(function(){
 $("#calcIcon").click(function(){
     $(".clac").removeClass("none");
     $("#calculator").removeClass("none");
+    $("#X").removeClass("none");
     $("#appoverlay").animate({opacity:'0'}, "300");
 $("#appoverlay").animate({opacity:'0'}, "300");
 $(".appbutton").css("transform","rotate(0deg)");
