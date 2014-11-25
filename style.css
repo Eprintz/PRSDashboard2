@@ -504,3 +504,6 @@ form input{
     top: 2vh;
     z-index: 1;
 }
+.none{
+    display: none;
+}
