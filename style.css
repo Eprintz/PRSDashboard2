@@ -1,21 +1,18 @@
 html,body,*{
     margin:0px;
     padding:0px;
-    font-family:"Roboto",sans-serif;
+    font-family:"RobotoDraft",sans-serif;
 }
 html,body{
-  background: url(Pictures/background.jpg);
+    background-image:url(/Pictures/background.jpg);
     background-height:100vh;
     text-align:center;
+    overflow:hidden;
 }
 .night{
-    background: url(http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2010/09/PacRidge8-537x429.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-height:100vh;
-    text-align:center;
+    height:100%;
+    background-image: url(http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2010/09/PacRidge8-537x429.jpg);
+    background-size:cover;
 }
 img{
     user-drag:none;
@@ -23,81 +20,60 @@ img{
     -webkit-user-drag:none;
 }
 .bar{
-    width:14vw;
-    height: calc(100% + 100px);
-    margin-top:-100px;
-    position:fixed;
-    z-index:1;
-    background-color:rgba(255,255,255,0.8);
-    box-shadow:0px 0px 10px #888;
-    display:none;
-    opacity:0;
-    padding-top:100px;
-    box-sizing:border-box;
+    
 }
 /*------------------------------------------------*/
 /*Login Screen*/
+.close{
+    position:absolute;
+    float:right;
+    display:block;
+    color:red;
+    right:0px;
+}
 #loginscreen{
-    width:110%;
-    height:210%;
-    background-color:rgba(0,0,0,0.7);
-    margin-top:-100%;
-    position:fixed;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:rgba(0,0,0,0.75);
 }
 #loginbox{
     position:absolute;
-    width:500px;
-    height:320px;
+    top:5vw;
+    left:35vw;
+    width:30vw;
+    height:22vw;
     background-color:white;
-    left:50%;bottom:50%;
-    margin-left:-250px;
-    border-radius:4px;
-    font-weight:16px;
 }
 .logintitle{
-    float:left;
-    margin-top:15px;
     text-align:center;
-    font-size:40px;
-    width:500px;
+    font-size:2.6vw;
+    margin-top:0.3vw;
 }
-.logintext{
-    width:480px;
-    margin-left:10px;
-    margin-top:20px;
-    border:2px solid black;
-    border-radius:4px;
-    resize:none;
-    height:40px;
-    font-size:20px;
-    padding:5px;
-    box-sizing:border-box;
-}
-.submit{
-    width:200px;
-    height:35px;
-    text-align:center;
-    font-size:25px;
-    background-color:black;
-    color:white;
-    display:inline-block;
-    border-radius:4px;
-    margin-top:20px;
-    cursor:pointer;
-    transition:0.4s;
-}
+    .form paper-input{
+        width:80%;
+        text-align:left;
+        font-size:1.25vw;
+    }
+    .form paper-button{
+        display:block;
+        width:40%;
+        margin-left:30%;
+        height:2.4vw;
+        font-size:1vw;
+    }
 #createbutton{
     cursor:pointer;
-    transition:0.25s;
+    color: black;
 }
 #createbutton:hover{
-    color: #535353;
+    color: #3B3B3B;
 }
 .notification{
     height:1.75vw;
     width:1.75vw;
-    border-bottom-left-radius:1.75vw;
-    border-top-right-radius:4px;
     text-align:center;
     box-sizing:border-box;
     padding-left:0.7vw;
@@ -107,149 +83,163 @@ img{
     color:white;
 }
 /*------------------------------------------------*/
-/*Right Bar+Apps overlay*/
-#appoverlay{
-    position:fixed;
-    right:0px;
-    left:0px;
-    width:10vw;
-    height: 100vh;
-    background-color:rgba(255,255,255,0.95);
-    opacity:0;
-    display:none;
-    z-index:100;
-}
-.icon{
-    margin-top: 5vh;
-    margin-left: 2.75vw;
-    cursor: pointer;
-    display: block;
-}
-.applist{
-    font-size:30px;
-    height:40px;
-    text-align:left;
-    box-sizing:border-box;
-    position:relative;
-    width:100%;
-    padding-left:5px;
-    transition:0.5s ease-out;
-    cursor:pointer;
-    transition:0.5s ease-out;
-}
-.applist img{
-    float:right;
+/*Create*/
+#createmenu{
     position:absolute;
-    height:25px;
-    width:25px;
-    margin-top:7.5px;
-    right:5px;
-    transition:0.5s ease-out;
-    -webkit-transition:0.5s ease-out;
+    right:2vw;
+    bottom:2.3vw;
+    margin-bottom:55px;
+    display:none;
 }
-.applist:hover{
-    box-shadow:0px 0px 3px #888;
+    .createsmall{
+        display:block;
+        margin-right:10px;
+        margin-bottom:5px;
+    }
+        #document{
+            background-color:#5677fc;
+        }
+        #task{
+            background-color:#259b24;
+        }
+        #reminder{
+            background-color:#FF9933;
+        }
+        #email{
+           background-color:#CC33FF;
+        }
+        #group{
+            background-color:#33CCCC; 
+        }
+        #project{
+            background-color:#FF0066;   
+        }
+#createcontainer{
+    color:#fff;
+    position:absolute;
+    right:2vw;
+    bottom:2vw;
 }
-.applist:active{
-    box-shadow:0px 0px 6px #888;
+    #create{
+        height:55px;
+        width:55px;
+        padding:15px;
+        transition:0.5s;
+    }
+    .create:hover #create{
+        transform:rotate(90deg);
+    }
+.multipurpose{
+    width:70vw;
+    height:45vh;
+    position:absolute;
+    bottom:0vw;
+    margin-bottom:-45vh;
+    left:15vw;
+    background-color:white;
+    border-top-left-radius:0.2vw;
+    border-top-right-radius:0.2vw;
+    box-shadow:0px 0px 6px #626262;
 }
-#settingsbar{
-    right:0px;
-}
-.submit{
-    font-size:20px;
-    padding-bottom:2px;
-    padding-top:2px;
-    width:30%;
-    color:white;
-    background-color:black;
-    border-radius:2px;
-    display:inline-block;
-    cursor:pointer;
-}
-.submit:hover{
-    box-shadow:0px 0px 6px #888;
-}
-.submit:active{
-    box-shadow:0px 0px 8px black;
-}
+    .multiheader{
+        font-size:3vw;
+        display:block;
+        margin:1vw;
+        text-align:left;
+        margin-bottom:0px;
+    }
+    .multipurpose paper-input{
+        width:65%;
+        text-align:left;
+        font-size:1.2vw;
+        display:block;
+        margin-left:1vw;
+        margin-top:-2vh;
+    }
+    #taskcreation{
+        width:40vw;  
+        left:30vw;
+    }
+    .multipurpose paper-dropdown-menu {
+        box-sizing: border-box;
+        width:10vw;
+        display:block;
+        float:left;
+        margin-left:1vw;
+    }
+    .multipurpose paper-dropdown{
+        top:30px;
+    }
+    .multipurpose core-menu {
+        box-sizing: border-box;
+        width:10vw;
+    }
+    paper-item {
+        font-size:1.2vh;
+        box-sizing:border-box;
+    }
+    .multipurpose paper-button{
+        float:right;
+        display:block;
+        margin-right:3.5vw;
+        margin-top:5vh;
+    }
 /*------------------------------------------------*/
 /*Settings*/
-#classsettings{
-    font-size:100%;
-}
-#classsettings table{
-    width:100%;
-}
-#classsettings textarea{
-    border:0px;
-    background-color:transparent;
-    font-family:"Roboto",sans-serif;
-    font-size:100%;
-    border: none;
-    outline: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow:none;
-    padding-left:-20px;
-    width:100%;
-    resize:none;
-    overflow:hidden;
-    padding-top:3.9vh;
-}
+
 /*------------------------------------------------*/
 /*Header*/
-.title{
-    font-size:34px;
-}
 #header{
-    width:100%;
-    padding:5px;
-    box-sizing:border-box;
+    background-color:white;
+    font-size:2vw;
+    text-align:left;
 }
-.appbutton{
-    position:absolute;
-    left:5px;
-    top:0px;
-    cursor:pointer;
-    z-index:11;
-    opacity:0.99;
-    transition:0.5s;
-}
-.appbutton img{
-    cursor:pointer;
-    width:2vw;
-    margin:5px;
-}
-#title{
+    paper-icon-button{
+        padding:5px;
+        opacity:0.65;
+    }
+        paper-icon-button:hover{
+        opacity:1;
+    }
+/*------------------------------------------------*/
+/*Calendar*/
+#calendar{
+    width:80vw;
+    height:6.6vw;
+    background-color:white;
     display:inline-block;
-    font-size:5vw;
-    color:black;
-    margin-top:10px;
+    margin-top:1.2vw;
+    margin-bottom:1.2vw;
 }
-#date{
-    font-size:25px;
-    margin-top:-5px;
-    margin-bottom:-40px;
-}
-#settings{
-    position:absolute;
-    right:5px;
-    top:0px;
-}
-#settings img{
-    cursor:pointer;
-    width:2vw;
-    margin:5px;
-    display:block;
-}
+    .day{
+        width:11.4285vw;
+        height:6.6vw;
+        float:left;
+        box-sizing:border-box;
+        border-right:1px solid #838383;
+    }
+    .date{
+        width:100%;
+        height:1.4vw;
+        font-size:1.2vw;
+        text-align:center;
+        box-sizing:border-box;
+        position:relative;
+    }
+        .datenumber{
+            float:left;
+            text-align:left;
+            padding-left:0.2vw;
+            font-weight:bold;
+            position:absolute;
+            left:0px;
+        }
 /*------------------------------------------------*/
 /*Day Bar and Class Cards*/
 #dayview{
     width:100%;
     padding:10px;
     box-sizing:border-box;
-    margin-top:40px;
 }
 #daybar{
     width:80%;
@@ -257,7 +247,6 @@ img{
     background-color:white;
     display:inline-block;
     transition:0.5s ease-out;
-    border-radius:3px;
     box-shadow: 0px 0px 8px darkgrey;
 }
 .period{
@@ -266,12 +255,8 @@ img{
     background-color:black;
 }
 #period1{
-    border-top-left-radius:3px;
-    border-bottom-left-radius:3px;
 }
 #period8{
-    border-top-right-radius:3px;
-    border-bottom-right-radius:3px;
 }
 #classlist{
     vertical-align:top;
@@ -284,146 +269,35 @@ img{
     margin:15px;
     margin-top:45px;
     transition:0.5s ease-out;
-    border-radius:4px;
     padding:10px;
     font-size:1vw;
     box-sizing:border-box;
     text-align:left;
-    box-shadow: 0px 0px 8px darkgrey;
+    border-radius:0.15vw;
 }
 .classheader{
-    border-top-left-radius:4px;
-    border-top-right-radius:4px;
-    height:1vw;
+    height:1.2vw;
     margin:-10px;
-    margin-bottom:10px;
+    margin-bottom:0.7vw;
     background-color:black;
+    border-top-left-radius:0.15vw;
+    border-top-right-radius:0.15vw;
 }
 .class .title{
     font-size:1.5vw;
 }
+
 /*------------------------------------------------*/
-/*Calendar*/
-#calendarsection{
-    width:70%;
-    min-width:400px;
-    display:inline-block;
-    min-height:50px;
-    background-color:white;
-    box-shadow: 0px 0px 8px darkgrey;
-    opacity:0.95;
-    boz-sizing:border-box;
-    border-radius:4px;
-}
-#calendar{
-    width:70%;
-    float:left;
-}
-#calendartitle{
-    font-size:2.4vw;
-    padding:4px;
-    box-sizing:border-box;
-}
-.calendarday{
-    width:12%;
-    margin:0.5%;
-    height:60px;
-    box-shadow:0px 0px 4px #888;
-    border-radius:2px;
-    display:inline-block;
-}
-.calendardayname{
-    width:12%;
-    margin:0.5%;
-    height:40px;
-    font-size:1vw;
-    border-radius:2px;
-    display:inline-block;
-    font-weight:bold;
-}
-/*------------------------------------------------*/
-/*App Overlay+Tasks*/
-#appssection{
-    width:70%;
-    text-align:center;
-    display:inline-block;
-}
+/*Apps*/
 .app{
-    width:30%;
-    min-width:300px;
-    margin-right:5%;
-    margin-top:10px;
+    max-width:100%;
     text-align:center;
     background-color:white;
-    box-shadow: 0px 0px 8px darkgrey;
-    border-radius:4px;
-    display:none;
-    opacity:0;
-    vertical-align:top;
-}
-#tasks{
-    width:30%;
-    float:right;
-    padding-right:20px;
-    box-sizing:border-box;
-}
-#taskstitle{
-    font-size:2vw;
-}
-#createdtasks{
-    max-height:265px;
-}
-.task{
-    width:100%;
     display:inline-block;
-    font-size:1vw;
     box-sizing:border-box;
-    text-align:left;
-}
-#newtask{
-    cursor:pointer;
-    transition:0.3s ease-out;
-    text-align:center;
-    font-size:1.2vw;
-    box-sizing:border-box;
-    text-align:center;
-    position:relative;
-}
-#newtask:hover{
-    background-color:lightgrey;
-}
-#newtask:active{
-    background-color:darkgrey;
-}
-#newtask img{
-    float:right;
-    margin:5px;
-    height:1.25vw;
-    position:absolute;
-    right:0px;
-}
-.color{
-    width:5px;
-    height:36px;
-    background-color:#0099FF;
-    float:left;
-}
-.taskname{
-    width:calc(100% - 5px);
-    height:36px;
-    resize:none;
-    font-size:24px;
-    font-family:"Roboto",sans-serif;
-    float:left;
-    border:none;
-    box-sizing:border-box;
-    padding-left:10px;
-    border: none;
-    outline: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    background-color:transparent;
+    padding:0vw;
+    margin:0.5vw;
+    vertical-align:top;
 }
 /*------------------------------------------------*/
 /*Calculator*/
@@ -465,17 +339,16 @@ form input{
     height: 3vh;
     border: 1px solid grey;
     color: white;
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px;
 }
 #calculator{
     border: 1px solid black;
     width: 20.02vw;
-    border-radius: 5px;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-    position: static;
+    position: relative;
+    bottom: 50vh;
+    height: 20.6vh;
 }
  #left{
      background-color: #C9C9C9;
@@ -501,9 +374,6 @@ form input{
     background-color: #EDEDED;
     border-radius: 100%;
     cursor: pointer;
-    top: 2vh;
-    z-index: 1;
-}
-.none{
-    display: none;
+    bottom: 21.5vh;
+    /*display: none;*/
 }
