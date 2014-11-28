@@ -1,74 +1,74 @@
 $(document).ready(function(){
+    var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+	Notification.requestPermission(function (permission) {
+		// console.log(permission);
+	});
 //Login
+var notification = new Notification('Task', {
+    body: 'EXAMPLE TASK IS AN EXAMPLE',
+    icon: '/Pictures/logolarge.png'
+});
 var username = "Login";
 		$("#login").html(username);
 		if(username="Login"){
 			$("body").append
 			('<div id="loginscreen"></div><div id="loginbox"><div class="logintitle">Login</div></div>');
 			$("#loginbox").append
-			('<form id="loginform"><textarea class="logintext"id="lt1"placeholder="Username"></textarea><textarea class="logintext"id="lt2"placeholder="Password"></textarea></form><div id="loginsubmit"class="submit">Login</div>');
+			('<form class="form"id="loginform"><paper-input label="Username" floatingLabel></paper-input><paper-input label="Password" floatingLabel></paper-input><paper-button raised class="submit"id="loginsubmit">Login</paper-button></form>');
 			$("#loginbox").append
 			('<div id="createaccount"><div class="logintitle"id="createbutton">Create Account</div></div>');
 			var createformon = 0;
 			$("#createbutton").click(function(){
 				if(createformon==0){
-				$("#loginbox").animate({height:"540px",marginBottom:"-220px"},"fast");
+				$("#loginbox").animate({height:"36.5vw",marginBottom:"-14.5vw"},"fast");
 				$("#loginbox").append
-				('<form id="createform"><textarea class="logintext"id="lt3"placeholder="Username"></textarea><textarea class="logintext"id="lt4"placeholder="Password"></textarea><div id="createsubmit"class="submit">Create</div></form>');
+				('<form class="form"id="createform"><paper-input label="Username" floatingLabel></paper-input><paper-input label="Password" floatingLabel></paper-input><paper-button raised class="submit"id="loginsubmit">Create</paper-button></form>');
 					createformon+=1;	
 				}
 				else if(createformon==1){
-					$("#loginbox").animate({height:"320px",marginBottom:"0px"},"fast");
+					$("#loginbox").animate({height:"22vw",marginBottom:"0vw"},"fast");
 					$("#createform").remove();
 					createformon-=1;
 				}
 			});
 		}
-$(document).on('click','#loginsubmit',function(){
-        var username = $("#lt3").val();
-		var password = $("#lt4").val();
-		if(username !== "" && password !== ""){
-			$("#loginscreen").remove();
-			$("#loginbox").remove();
-		}
-		else{
-			$("#loginsubmit").css("background-color","red");
-		}
-	});
+$("#loginsubmit").click(function(){
+    $("#loginscreen").remove();
+    $("#loginbox").remove();
+});
+//Action Menus
+$(".create").mouseenter(function(){
+    $("#createmenu").css("display","block");
+});
+$(".create").mouseleave(function(){
+    $("#createmenu").css("display","none"); 
+});
+
  //Variable Declaration
     var date = new Date();
-    var improveddate = date.getDate();
+        var improveddate = date.getDate();
     var usergrade = 9;
-    var usercolor = "black";
     var daytype = "odd";
     var dayevents = "none";
     var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-    var periods = ["Class1", "Class2", "Class3", "Class4",  "Class5", "Class6", "Class7", "Class8"];
+    var periods = ["Math", "Spanish", "English", "History",  "SL/Clubs", "PE", "Design", "Biology"];
     var colors = ["Orange", "Red", "Green", "Purple", "Teal", "Grey", "Brown", "Darkblue"];
-//Applying Variables
-    $("#date").append(monthNames[date.getMonth()]+" "+improveddate+" "+date.getFullYear());
-        $("#calendartitle").html(monthNames[date.getMonth()]);
-    var createdtasks = 0;
-    var colorid = 1;
-    $("#newtask").click(function(){
-        $("#createdtasks").append
-        ("<div class='task'><div class='color'id='c"+colorid+"'></div><textarea class='taskname'placeholder='Task Title'></textarea></div>");
-        createdtasks+=1;
-        colorid+=1;
-        if(createdtasks==7){
-            $("#createdtasks").css("overflow-y","scroll");
-        }
-    });
-    $(document).on("mouseenter",".color",function(){
-        $("#"+this.id).html("<div class='selector'id='s"+this.id+"'></div>");
-        
-    });
-    $(document).on("mouseleave",".color",function(){
-        $("#"+this.id).html("");
-        
-    });
+    var usercolor = "black";
+    var classnotifications = [0,0,0,0,0,0,0,0]
+//Applying Variable
+    var currentday = date.getDay()+1;
+    var currentdate = date.getDate();
+    var daysafter = 6-date.getDay();
+    var daysbefore = 6-daysafter;
+    var datesleft = 7;
+    var daydates = [0,0,0,0,0,0,0]
+    while(datesleft>0){
+        daydates[datesleft] = currentdate+datesleft-daysbefore-1;
+        $("#date"+datesleft).prepend("<div class='datenumber'>"+(daydates[datesleft])+"</div>");
+        datesleft-=1;
+    } 
      function redotopbar(){   
-         
         $("#t1").html(periods[0]);
         $("#t2").html(periods[1]);
         $("#t3").html(periods[2]);
@@ -88,36 +88,68 @@ $(document).on('click','#loginsubmit',function(){
         $("#ch8").css("background-color",colors[7]);
         
         $("#n1").css("background-color",colors[0]);
-            if($("#n1").html()==""){
-                $("#n1").css("background-color","transparent");
+            if(classnotifications[0]==0){
+                $("#n1").css("display","none");   
+            }
+            else{
+                $("#n1").css("display","inline-bock");
+                $("#n1").html(classnotifications[0]);
             }
         $("#n2").css("background-color",colors[1]);
-            if($("#n2").html()==""){
-                $("#n2").css("background-color","transparent");
+             if(classnotifications[0]==0){
+                    $("#n2").css("display","none");   
+            }
+            else{
+                $("#n2").css("display","inline-bock");
+                $("#n2").html(classnotifications[0]);
             }
         $("#n3").css("background-color",colors[2]);
-            if($("#n3").html()==""){
-                $("#n3").css("background-color","transparent");
+            if(classnotifications[0]==0){
+                $("#n3").css("display","none");   
+            }
+            else{
+                $("#n3").css("display","inline-bock");
+                $("#n3").html(classnotifications[0]);
             }
         $("#n4").css("background-color",colors[3]);
-            if($("#n4").html()==""){
-                $("#n4").css("background-color","transparent");
+            if(classnotifications[0]==0){
+                $("#n4").css("display","none");   
+            }
+            else{
+                $("#n4").css("display","inline-bock");
+                $("#n4").html(classnotifications[0]);
             }
         $("#n5").css("background-color",colors[4]);
-            if($("#n5").html()==""){
-                $("#n5").css("background-color","transparent");
+            if(classnotifications[0]==0){
+                $("#n5").css("display","none");   
+            }
+            else{
+                $("#n5").css("display","inline-bock");
+                $("#n5").html(classnotifications[0]);
             }
         $("#n6").css("background-color",colors[5]);
-            if($("#n6").html()==""){
-                $("#n6").css("background-color","transparent");
+            if(classnotifications[0]==0){
+                $("#n6").css("display","none");   
+            }
+            else{
+                $("#n6").css("display","inline-bock");
+                $("#n6").html(classnotifications[0]);
             }
         $("#n7").css("background-color",colors[6]);
-            if($("#n7").html()==""){
-                $("#n7").css("background-color","transparent");
+            if(classnotifications[0]==0){
+                $("#n7").css("display","none");   
+            }
+            else{
+                $("#n7").css("display","inline-bock");
+                $("#n7").html(classnotifications[0]);
             }
         $("#n8").css("background-color",colors[7]);
-            if($("#n8").html()==""){
-                $("#n8").css("background-color","transparent");
+            if(classnotifications[0]==0){
+                $("#n8").css("display","none");   
+            }
+            else{
+                $("#n8").css("display","inline-bock");
+                $("#n8").html(classnotifications[0]);
             }
 
         $("#period1").css("background-color",colors[0]);
@@ -170,6 +202,45 @@ $(document).on('click','#loginsubmit',function(){
         $("#class7").css("opacity","0.3");
     }
 /*----------------------------------------------------------------*/
+/*Multipurpose Creation*/
+$("#task").click(function(){
+    $("#dayview").append("<div class='multipurpose'id='taskcreation'><paper-icon-button icon='close'class='close'id='taskclose'></paper-icon-button><div class='multiheader' id='taskmultiheader'>Create Task</div><select id='taskclassselect'><option value='"+periods[0]+"'>"+periods[0]+"</option><option value='"+periods[1]+"'>"+periods[1]+"</option><option value='"+periods[2]+"'>"+periods[2]+"</option><option value='"+periods[3]+"'>"+periods[3]+"</option><option value='"+periods[4]+"'>"+periods[4]+"</option><option value='"+periods[5]+"'>"+periods[5]+"</option><option value='"+periods[6]+"'>"+periods[6]+"</option><option value='"+periods[7]+"'>"+periods[7]+"</option></select><select id='taskdayselect'><option value='1'>Sunday "+daydates[1]+"</option><option value='2'>Monday "+daydates[2]+"</option><option value='3'>Tuesday "+daydates[3]+"</option><option value='4'>Wednesday "+daydates[4]+"</option><option value='5'>Thursday "+daydates[5]+"</option><option value='6'>Friday "+daydates[6]+"</option><option value='7'>Saturday "+daydates[7]+"</option></select><paper-input label='Task Name' id='taskcreatename' floatingLabel inputValue='{{taskcreatename}}'></paper-input><paper-input label='Task Description' id='taskcreatedescription' inputValue='{{taskcreatename}}' floatingLabel></paper-input><paper-button id='taskcreate'>Create</paper-button></div>"); 
+        $(".paperclass1").css("color",colors[0]);
+        $(".paperclass2").css("color",colors[1]);
+        $(".paperclass3").css("color",colors[2]);
+        $(".paperclass4").css("color",colors[3]);
+        $(".paperclass5").css("color",colors[4]);
+        $(".paperclass6").css("color",colors[5]);
+        $(".paperclass7").css("color",colors[6]);
+        $(".paperclass8").css("color",colors[7]);
+    $("#taskcreation").animate({marginBottom:"0px"},300); 
+    $("#taskclose").click(function(){
+        $("#taskcreation").animate({marginBottom:"-45vh"},300);
+        setTimeout(function(){
+            $("#taskcreation").remove();
+        },320)
+    });
+    $("#taskcreate").click(function(){
+        var createdtaskclass = $("#taskclassselect").val();
+        var createdtaskdate = $("#taskdayselect").val();
+        var createdtaskname = $("#taskcreatename").html();        
+        var createdtaskname = $("#taskscreatedescription").html();
+        Polymer("app-input", {
+            valueChanged: function() {
+                
+            }
+        });
+        $("#cd"+createdtaskdate).append(createdtaskname);
+    });
+    $("#task").dblclick(function(){
+        $("#taskcreation").animate({marginBottom:"-45vh"},300);
+        setTimeout(function(){
+            $("#taskcreation").remove();
+        },320)
+    });
+});
+
+/*----------------------------------------------------------------*/
 /*Class Settings*/
     $("#settings").click(function(){
         $("#cn1").html(periods[0]);
@@ -208,14 +279,10 @@ $(document).on('click','#loginsubmit',function(){
             redotopbar();
         });
     });
-    if(Number(date.getHours())>18){
+    if(Number(date.getHours())<0){
         $("body").addClass("night");
-        $("#title").css("color","white");
-        $("#date").css("color","white");
     }
     else{
         $("body").removeClass("night");
-        $("#title").css("color","black");
-        $("#date").css("color","black");
     }
 });
