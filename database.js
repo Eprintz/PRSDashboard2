@@ -41,10 +41,21 @@ $("#loginsubmit").click(function(){
 });
 //Action Menus
 $(".create").mouseenter(function(){
-    $("#createmenu").css("opacity","1");
+	$("#document").animate({bottom: "-33vh"});
+	$("#task").animate({bottom: "-33vh"});
+	$("#reminder").animate({bottom: "-33vh"});
+	$("#email").animate({bottom: "-33vh"});
+	$("#group").animate({bottom: "-33vh"});
+	$("#project").animate({bottom: "-33vh"});
+	
 });
 $(".create").mouseleave(function(){
-    $("#createmenu").css("opacity","0"); 
+	$("#document").animate({bottom: "-42vh"});
+	$("#task").animate({bottom: "-50vh"});
+	$("#reminder").animate({bottom: "-57vh"});
+	$("#email").animate({bottom: "-65vh"});
+	$("#group").animate({bottom: "-71vh"});
+	$("#project").animate({bottom: "-78vh"});
 });
 /*----------------------------------------------------------------------*/
 /*Get Username and Password*/

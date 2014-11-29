@@ -87,32 +87,35 @@ img{
 #createmenu{
     position:absolute;
     right:2vw;
-    bottom:2.3vw;
-    margin-bottom:55px;
-    opacity:0;
 }
     .createsmall{
         display:block;
         margin-right:10px;
-        margin-bottom:5px;
+		margin-bottom: .5vh;
     }
         #document{
             background-color:#5677fc;
+			bottom: -42vh;
         }
         #task{
             background-color:#259b24;
+			bottom: -50vh;
         }
         #reminder{
             background-color:#FF9933;
+			bottom: -57vh;
         }
         #email{
            background-color:#CC33FF;
+			bottom: -65vh;
         }
         #group{
-            background-color:#33CCCC; 
+            background-color:#33CCCC;
+			bottom: -71vh;
         }
         #project{
-            background-color:#FF0066;   
+            background-color:#FF0066;
+			bottom: -78vh; 
         }
 #createcontainer{
     color:#fff;
@@ -121,8 +124,8 @@ img{
     bottom:2vw;
 }
     #create{
-        height:55px;
-        width:55px;
+        height:56px;
+        width:56px;
         padding:15px;
         transition:0.5s;
     }
