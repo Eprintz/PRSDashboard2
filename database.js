@@ -1,4 +1,6 @@
 $(document).ready(function(){
+/*----------------------------------------------------------------------*/
+/*Notification Tests*/
     var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
 	Notification.requestPermission(function (permission) {
@@ -9,13 +11,13 @@ var notification = new Notification('Task', {
     body: 'EXAMPLE TASK IS AN EXAMPLE',
     icon: '/Pictures/logolarge.png'
 });
-var username = "Login";
-		$("#login").html(username);
+/*----------------------------------------------------------------------*/
+/*Login Screen*/
 		if(username="Login"){
 			$("body").append
 			('<div id="loginscreen"></div><div id="loginbox"><div class="logintitle">Login</div></div>');
 			$("#loginbox").append
-			('<form class="form"id="loginform"><paper-input label="Username" floatingLabel></paper-input><paper-input label="Password" floatingLabel></paper-input><paper-button raised class="submit"id="loginsubmit">Login</paper-button></form>');
+			('<form class="form"id="loginform"><paper-input label="Username" floatingLabel id="usernameinput"></paper-input><paper-input label="Password" id="passwordinput" floatingLabel ></paper-input><paper-button raised class="submit"id="loginsubmit">Login</paper-button></form>');
 			$("#loginbox").append
 			('<div id="createaccount"><div class="logintitle"id="createbutton">Create Account</div></div>');
 			var createformon = 0;
@@ -39,13 +41,21 @@ $("#loginsubmit").click(function(){
 });
 //Action Menus
 $(".create").mouseenter(function(){
-    $("#createmenu").css("display","block");
+    $("#createmenu").css("opacity","1");
 });
 $(".create").mouseleave(function(){
-    $("#createmenu").css("display","none"); 
+    $("#createmenu").css("opacity","0"); 
 });
-
- //Variable Declaration
+/*----------------------------------------------------------------------*/
+/*Get Username and Password*/
+document.querySelector('#usernameinput').addEventListener('change', function(event) {
+    var username = event.target.value;
+  });
+document.querySelector('#passwordinput').addEventListener('change', function(event) {
+    var username = event.target.value;
+  });
+/*----------------------------------------------------------------------*/
+/*Variable Declaration*/
     var date = new Date();
         var improveddate = date.getDate();
     var usergrade = 9;
@@ -56,7 +66,8 @@ $(".create").mouseleave(function(){
     var colors = ["Orange", "Red", "Green", "Purple", "Teal", "Grey", "Brown", "Darkblue"];
     var usercolor = "black";
     var classnotifications = [0,0,0,0,0,0,0,0]
-//Applying Variable
+/*----------------------------------------------------------------------*/
+/*Applying Variables*/
     var currentday = date.getDay()+1;
     var currentdate = date.getDate();
     var daysafter = 6-date.getDay();
@@ -67,7 +78,11 @@ $(".create").mouseleave(function(){
         daydates[datesleft] = currentdate+datesleft-daysbefore-1;
         $("#date"+datesleft).prepend("<div class='datenumber'>"+(daydates[datesleft])+"</div>");
         datesleft-=1;
-    } 
+    }
+    function daysInMonth(month,year) {
+    return new Date(year, month, 0).getDate();
+}
+    var daysinmonth = daysInMonth(date.getYear(), date.getMonth());
      function redotopbar(){   
         $("#t1").html(periods[0]);
         $("#t2").html(periods[1]);
@@ -202,9 +217,9 @@ $(".create").mouseleave(function(){
         $("#class7").css("opacity","0.3");
     }
 /*----------------------------------------------------------------*/
-/*Multipurpose Creation*/
+/*Task Creation and Functions*/
 $("#task").click(function(){
-    $("#dayview").append("<div class='multipurpose'id='taskcreation'><paper-icon-button icon='close'class='close'id='taskclose'></paper-icon-button><div class='multiheader' id='taskmultiheader'>Create Task</div><select id='taskclassselect'><option value='"+periods[0]+"'>"+periods[0]+"</option><option value='"+periods[1]+"'>"+periods[1]+"</option><option value='"+periods[2]+"'>"+periods[2]+"</option><option value='"+periods[3]+"'>"+periods[3]+"</option><option value='"+periods[4]+"'>"+periods[4]+"</option><option value='"+periods[5]+"'>"+periods[5]+"</option><option value='"+periods[6]+"'>"+periods[6]+"</option><option value='"+periods[7]+"'>"+periods[7]+"</option></select><select id='taskdayselect'><option value='1'>Sunday "+daydates[1]+"</option><option value='2'>Monday "+daydates[2]+"</option><option value='3'>Tuesday "+daydates[3]+"</option><option value='4'>Wednesday "+daydates[4]+"</option><option value='5'>Thursday "+daydates[5]+"</option><option value='6'>Friday "+daydates[6]+"</option><option value='7'>Saturday "+daydates[7]+"</option></select><paper-input label='Task Name' id='taskcreatename' floatingLabel inputValue='{{taskcreatename}}'></paper-input><paper-input label='Task Description' id='taskcreatedescription' inputValue='{{taskcreatename}}' floatingLabel></paper-input><paper-button id='taskcreate'>Create</paper-button></div>"); 
+    $("#dayview").append("<div class='multipurpose'id='taskcreation'><paper-icon-button icon='close'class='close'id='taskclose'></paper-icon-button><div class='multiheader' id='taskmultiheader'>Create Task</div><select id='taskclassselect'><option value='0'>"+periods[0]+"</option><option value='1'>"+periods[1]+"</option><option value='2'>"+periods[2]+"</option><option value='3'>"+periods[3]+"</option><option value='4'>"+periods[4]+"</option><option value='5'>"+periods[5]+"</option><option value='6'>"+periods[6]+"</option><option value='7'>"+periods[7]+"</option></select><select id='taskdayselect'><option value='1'>Sunday "+daydates[1]+"</option><option value='2'>Monday "+daydates[2]+"</option><option value='3'>Tuesday "+daydates[3]+"</option><option value='4'>Wednesday "+daydates[4]+"</option><option value='5'>Thursday "+daydates[5]+"</option><option value='6'>Friday "+daydates[6]+"</option><option value='7'>Saturday "+daydates[7]+"</option></select><paper-input label='Task Name' id='taskcreatename' floatingLabel inputValue='{{taskcreatename}}'></paper-input><paper-input label='Task Description' id='taskcreatedescription' inputValue='{{taskcreatename}}' floatingLabel></paper-input><paper-button id='taskcreate'>Create</paper-button></div>"); 
         $(".paperclass1").css("color",colors[0]);
         $(".paperclass2").css("color",colors[1]);
         $(".paperclass3").css("color",colors[2]);
@@ -220,17 +235,22 @@ $("#task").click(function(){
             $("#taskcreation").remove();
         },320)
     });
+    var taskcreatename = "Task Name";
+    var taskcreatedescription = "Task Description";
+    document.querySelector('#taskcreatename').addEventListener('change',         function(event) {
+    taskcreatename = event.target.value;
+  });
+document.querySelector('#taskcreatedescription').addEventListener('change', function(event) {
+    taskcreatedescription = event.target.value;
+  });
     $("#taskcreate").click(function(){
         var createdtaskclass = $("#taskclassselect").val();
         var createdtaskdate = $("#taskdayselect").val();
-        var createdtaskname = $("#taskcreatename").html();        
-        var createdtaskname = $("#taskscreatedescription").html();
-        Polymer("app-input", {
-            valueChanged: function() {
-                
-            }
-        });
-        $("#cd"+createdtaskdate).append(createdtaskname);
+        $("#cd"+createdtaskdate).append("<core-tooltip position='right'><p>"+taskcreatename+"</p><div tip>"+taskcreatedescription+"</div></core-tooltip>");                     $("#cd"+createdtaskdate+" p").css("background-color",colors[createdtaskclass]);
+        $("#taskcreation").animate({marginBottom:"-45vh"},300);
+        setTimeout(function(){
+            $("#taskcreation").remove();
+        },320)
     });
     $("#task").dblclick(function(){
         $("#taskcreation").animate({marginBottom:"-45vh"},300);
