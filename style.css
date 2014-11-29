@@ -85,36 +85,47 @@ img{
 /*------------------------------------------------*/
 /*Create*/
 #createmenu{
-    position:absolute;
+	position: absolute;
     right:2vw;
+	bottom: 5vh;
 }
     .createsmall{
         display:block;
         margin-right:10px;
-		bottom: -50vh;
+		z-index: 5;
     }
         #document{
             background-color:#5677fc;
         }
         #task{
             background-color:#259b24;
-			bottom: -6vh;
         }
         #reminder{
             background-color:#FF9933;
-			bottom: -12vh;
         }
         #email{
         	background-color:#CC33FF;
-			bottom: -18vh;
         }
         #group{
             background-color:#33CCCC;
-			bottom: -24vh;
 		}
         #project{
             background-color:#FF0066;
-			bottom: -30vh;
+		}
+        #taskwhole{
+			bottom: -7vh;
+        }
+        #reminderwhole{
+			bottom: -13.5vh;
+        }
+        #emailwhole{
+			bottom: -20vh;
+        }
+        #groupwhole{
+			bottom: -27vh;
+		}
+        #projectwhole{
+			bottom: -33.5vh;
 		}
 #createcontainer{
     color:#fff;
