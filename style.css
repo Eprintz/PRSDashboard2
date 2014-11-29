@@ -86,46 +86,64 @@ img{
 /*Create*/
 #createmenu{
 	position: absolute;
-    right:2vw;
-	bottom: 5vh;
+	bottom:5vh;
+	right: 2.5vw;
 }
-    .createsmall{
-        display:block;
-        margin-right:10px;
-		z-index: 5;
-    }
         #document{
             background-color:#5677fc;
+			height: 3.5vw;
+			width: 3.5vw;
+			padding: 25%;
         }
         #task{
             background-color:#259b24;
+			height: 3.5vw;
+			width: 3.5vw;
+			padding: 25%;
         }
         #reminder{
             background-color:#FF9933;
+			height: 3.5vw;
+			width: 3.5vw;
+			padding: 25%;
         }
         #email{
         	background-color:#CC33FF;
+			height: 3.5vw;
+			width: 3.5vw;
+			padding: 25%;
         }
         #group{
             background-color:#33CCCC;
+			height: 3.5vw;
+			width: 3.5vw;
+			padding: 25%;
 		}
         #project{
             background-color:#FF0066;
+			height: 3.5vw;
+			width: 3.5vw;
+			padding: 25%;
 		}
         #taskwhole{
-			bottom: -7vh;
+			position: absolute;
+			left: 0;
         }
         #reminderwhole{
-			bottom: -13.5vh;
+			position: absolute;
+			left: 0;
         }
         #emailwhole{
-			bottom: -20vh;
+			position: absolute;
+			left: 0;
         }
         #groupwhole{
-			bottom: -27vh;
+			position: absolute;
+			left: 0;
 		}
         #projectwhole{
-			bottom: -33.5vh;
+			position: absolute;
+			left: 0;
 		}
 #createcontainer{
     color:#fff;
@@ -134,9 +152,9 @@ img{
     bottom:4vh;
 }
     #create{
-        height:56px;
-        width:56px;
-        padding:15px;
+        height:4.25vw;
+        width:4.25vw;
+        padding:1.25vw;
         transition:0.5s;
     }
     .create:hover #create{

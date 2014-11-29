@@ -42,19 +42,20 @@ $("#loginsubmit").click(function(){
 //Action Menus
 $(".create").mouseenter(function(){
 	$("#documentwhole").animate({bottom: "8vh"});
-	$("#taskwhole").animate({bottom: "8vh"});
-	$("#reminderwhole").animate({bottom: "8vh"});
-	$("#emailwhole").animate({bottom: "8vh"});
-	$("#groupwhole").animate({bottom: "8vh"});
-	$("#projectwhole").animate({bottom: "8vh"});
+	$("#taskwhole").animate({bottom: "16vh"});
+	$("#reminderwhole").animate({bottom:"24vh"});
+	$("#emailwhole").animate({bottom: "32vh"});
+	$("#groupwhole").animate({bottom: "40vh"});
+	$("#projectwhole").animate({bottom: "48vh"});
 });
 $(".create").mouseleave(function(){
 	$("#documentwhole").animate({bottom: "0"});
-	$("#taskwhole").animate({bottom: "-7vh"});
-	$("#reminderwhole").animate({bottom: "-13.5vh"});
-	$("#emailwhole").animate({bottom: "-20vh"});
-	$("#groupwhole").animate({bottom: "-27vh"});
-	$("#projectwhole").animate({bottom: "-33.5vh"});
+	$("#taskwhole").animate({bottom: "0"});
+	$("#reminderwhole").animate({bottom: "0"});
+	$("#emailwhole").animate({bottom: "0"});
+	$("#groupwhole").animate({bottom: "0"});
+	$("#projectwhole").animate({bottom: "0"});
+	$(".createsmall").css("display", "inline-block");
 });
 /*----------------------------------------------------------------------*/
 /*Get Username and Password*/
