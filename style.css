@@ -91,37 +91,36 @@ img{
     .createsmall{
         display:block;
         margin-right:10px;
-		margin-bottom: .5vh;
+		bottom: -50vh;
     }
         #document{
             background-color:#5677fc;
-			bottom: -42vh;
         }
         #task{
             background-color:#259b24;
-			bottom: -50vh;
+			bottom: -6vh;
         }
         #reminder{
             background-color:#FF9933;
-			bottom: -57vh;
+			bottom: -12vh;
         }
         #email{
-           background-color:#CC33FF;
-			bottom: -65vh;
+        	background-color:#CC33FF;
+			bottom: -18vh;
         }
         #group{
             background-color:#33CCCC;
-			bottom: -71vh;
-        }
+			bottom: -24vh;
+		}
         #project{
             background-color:#FF0066;
-			bottom: -78vh; 
-        }
+			bottom: -30vh;
+		}
 #createcontainer{
     color:#fff;
     position:absolute;
     right:2vw;
-    bottom:2vw;
+    bottom:4vh;
 }
     #create{
         height:56px;

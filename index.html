@@ -3,21 +3,19 @@
         <head>
             <title>PRS Dashboard</title>
             <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon" />
-            <link href="components/bower_components/polymer/polymer.html" rel="import">
 <link href="components/bower_components/core-collapse/core-collapse.html" rel="import">
 <link href="components/bower_components/core-menu/core-menu.html" rel="import">
 <link href="components/bower_components/paper-dropdown/paper-dropdown.html" rel="import">
 <link href="components/bower_components/paper-item/paper-item.html" rel="import">
 <link href="components/bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
-<link href="/components/bower_components/paper-icon-button/paper-icon-button.html" rel="import">
-<link href="/components/bower_components/paper-fab/paper-fab.html" rel="import">
-<link href="/components/bower_components/core-dropdown/core-dropdown.html" rel="import">
- <link href="/components/bower_components/core-tooltip/core-tooltip.html" rel="import">
-<link href="/components/bower_components/core-toolbar/core-toolbar.html" rel="import">
-<link href="/components/bower_components/font-roboto/roboto.html" rel="import">
-    <link href="/components/bower_components/paper-shadow/paper-shadow.html" rel="import">
-<link href="/components/bower_components/paper-shadow/paper-shadow.css" rel="import">
-    <link href="/components/bower_components/paper-input/paper-input.html" rel="import">
+<link href="components/bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+<link href="components/bower_components/paper-fab/paper-fab.html" rel="import">
+<link href="components/bower_components/core-dropdown/core-dropdown.html" rel="import">
+ <link href="components/bower_components/core-tooltip/core-tooltip.html" rel="import">
+<link href="components/bower_components/core-toolbar/core-toolbar.html" rel="import">
+<link href="components/bower_components/font-roboto/roboto.html" rel="import">
+    <link href="components/bower_components/paper-shadow/paper-shadow.html" rel="import">
+    <link href="components/bower_components/paper-input/paper-input.html" rel="import">
   <link href="/components/bower_components/paper-button/paper-button.html" rel="import">
             <script src="/Plugins/jquery-2.1.1.min.js"></script>
             <script src="database.js"></script>
@@ -47,22 +45,22 @@
 <!--Action Icons-->
 <div class="create">
 <div id="createmenu">
-    <core-tooltip label="Project" class="createsmall"position="left" noarrow>
+    <core-tooltip label="Project" class="createsmall" id="projectwhole" position="left" noarrow>
         <paper-fab mini icon="folder-shared" id="project"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Group" class="createsmall"position="left" noarrow>
+    <core-tooltip label="Group" class="createsmall" id="groupwhole" position="left" noarrow>
         <paper-fab mini icon="account-child" id="group"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Email" class="createsmall"position="left" noarrow>
+    <core-tooltip label="Email" class="createsmall" id="emailwhole" position="left" noarrow>
         <paper-fab mini icon="mail" id="email"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Reminder" class="createsmall"position="left" noarrow>
+    <core-tooltip label="Reminder" class="createsmall" id="reminderwhole" position="left" noarrow>
         <paper-fab mini icon="alarm" id="reminder"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Task" class="createsmall"position="left" noarrow>
+    <core-tooltip label="Task" class="createsmall" id="taskwhole" position="left" noarrow>
         <paper-fab mini icon="check" id="task"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Document" class="createsmall" position="left" noarrow>
+    <core-tooltip label="Document" class="createsmall" id="documentwhole" position="left" noarrow>
         <paper-fab mini icon="description" id="document"></paper-fab>
     </core-tooltip>
 </div>
