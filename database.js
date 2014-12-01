@@ -94,19 +94,19 @@ $("#settings").click(function(){
 /*----------------------------------------------------------------------*/
 /*Action Menus*/
 $(".create").mouseenter(function(){
-    $("#documentwhole").animate({bottom: "70px",opacity:1},300);
-    $("#taskwhole").animate({bottom: "120px",opacity:1},300);
-    $("#reminderwhole").animate({bottom: "170px",opacity:1},300);
-    $("#emailwhole").animate({bottom: "220px",opacity:1},300);
-    $("#groupwhole").animate({bottom: "270px",opacity:1},300);
-    $("#projectwhole").animate({bottom: "320px",opacity:1},300);
+    $("#documentwhole").animate({opacity:1,bottom: "70px"},300);
+    $("#taskwhole").delay(50).animate({opacity:1,bottom: "120px"},300);
+    $("#reminderwhole").delay(100).animate({opacity:1,bottom: "170px"},300);
+    $("#emailwhole").delay(150).animate({opacity:1,bottom: "220px"},300);
+    $("#groupwhole").delay(200).animate({opacity:1,bottom: "270px"},300);
+    $("#projectwhole").delay(250).animate({opacity:1,bottom: "320px"},300);
 });
 $(".create").mouseleave(function(){
-    $("#documentwhole").animate({bottom: "0",opacity:0});
-    $("#taskwhole").animate({bottom: "0",opacity:0});
-    $("#reminderwhole").animate({bottom: "0",opacity:0});
-    $("#emailwhole").animate({bottom: "0",opacity:0});;
-    $("#groupwhole").animate({bottom: "0",opacity:0});
+    $("#documentwhole").delay(250).animate({bottom: "0",opacity:0});
+    $("#taskwhole").delay(200).animate({bottom: "0",opacity:0});
+    $("#reminderwhole").delay(150).animate({bottom: "0",opacity:0});
+    $("#emailwhole").delay(100).animate({bottom: "0",opacity:0});;
+    $("#groupwhole").delay(50).animate({bottom: "0",opacity:0});
     $("#projectwhole").animate({bottom: "0",opacity:0});
 });
 /*----------------------------------------------------------------------*/

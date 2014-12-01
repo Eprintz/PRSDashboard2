@@ -172,10 +172,10 @@ img{
     bottom:0vw;
 }
     #create{
-        height:55px;
-        width:55px;
-        padding:16px;
-        transition:0.3s;
+        height:4vw;
+        width:4vw;
+        padding:1vw;
+        transition:0.5s;
     }
     .create:hover #create{
         transform:rotate(90deg);
