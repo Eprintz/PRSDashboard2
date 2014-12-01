@@ -89,41 +89,45 @@ img{
 	bottom:5vh;
 	right: 2.5vw;
 }
+#createmenu paper-fab{
+	width: 3.5vw;
+	height: 3.5vw;
+}
         #document{
             background-color:#5677fc;
 			height: 3.5vw;
 			width: 3.5vw;
-			padding: 25%;
+			padding: .875vw;
         }
         #task{
             background-color:#259b24;
 			height: 3.5vw;
 			width: 3.5vw;
-			padding: 25%;
+			padding: .875vw;
         }
         #reminder{
             background-color:#FF9933;
 			height: 3.5vw;
 			width: 3.5vw;
-			padding: 25%;
+			padding: .875vw;
         }
         #email{
         	background-color:#CC33FF;
 			height: 3.5vw;
 			width: 3.5vw;
-			padding: 25%;
+			padding: .875vw;
         }
         #group{
             background-color:#33CCCC;
 			height: 3.5vw;
 			width: 3.5vw;
-			padding: 25%;
+			padding: .875vw;
 		}
         #project{
             background-color:#FF0066;
 			height: 3.5vw;
 			width: 3.5vw;
-			padding: 25%;
+			padding: .875vw;
 		}
         #taskwhole{
 			position: absolute;

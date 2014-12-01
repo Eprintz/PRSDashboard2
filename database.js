@@ -40,20 +40,22 @@ $("#loginsubmit").click(function(){
     $("#loginbox").remove();
 });
 //Action Menus
+	$(".createsmall").css("opacity", "0");
 $(".create").mouseenter(function(){
+	$(".createsmall").css("opacity", "1");
 	$("#documentwhole").animate({bottom: "8vh"});
-	$("#taskwhole").animate({bottom: "16vh"});
-	$("#reminderwhole").animate({bottom:"24vh"});
-	$("#emailwhole").animate({bottom: "32vh"});
-	$("#groupwhole").animate({bottom: "40vh"});
-	$("#projectwhole").animate({bottom: "48vh"});
+	$("#taskwhole").delay(100).animate({bottom: "16vh"});
+	$("#reminderwhole").delay(200).animate({bottom:"24vh"});
+	$("#emailwhole").delay(300).animate({bottom: "32vh"});
+	$("#groupwhole").delay(400).animate({bottom: "40vh"});
+	$("#projectwhole").delay(500).animate({bottom: "48vh"});
 });
 $(".create").mouseleave(function(){
-	$("#documentwhole").animate({bottom: "0"});
-	$("#taskwhole").animate({bottom: "0"});
-	$("#reminderwhole").animate({bottom: "0"});
-	$("#emailwhole").animate({bottom: "0"});
-	$("#groupwhole").animate({bottom: "0"});
+	$("#documentwhole").delay(500).animate({bottom: "0"});
+	$("#taskwhole").delay(400).animate({bottom: "0"});
+	$("#reminderwhole").delay(300).animate({bottom: "0"});
+	$("#emailwhole").delay(200).animate({bottom: "0"});
+	$("#groupwhole").delay(100).animate({bottom: "0"});
 	$("#projectwhole").animate({bottom: "0"});
 	$(".createsmall").css("display", "inline-block");
 });
