@@ -31,7 +31,7 @@ img{
     color:red;
     right:0px;
 }
-#loginscreen{
+.screen{
     width:100vw;
     height:100vh;
     position:absolute;
@@ -39,14 +39,20 @@ img{
     left:0px;
     background-color:rgba(0,0,0,0.75);
 }
-#loginbox{
+    #loginscreen{
+        
+    }
+.box{
     position:absolute;
-    top:5vw;
-    left:35vw;
-    width:30vw;
-    height:22vw;
-    background-color:white;
+    background-color:white;  
+    border-radius:0.25vw;
 }
+    #loginbox{
+        top:5vw;
+        left:35vw;
+        width:30vw;
+        height:22vw;
+    }
 .logintitle{
     text-align:center;
     font-size:2.6vw;
@@ -71,95 +77,105 @@ img{
 #createbutton:hover{
     color: #3B3B3B;
 }
-.notification{
-    height:1.75vw;
-    width:1.75vw;
-    text-align:center;
-    box-sizing:border-box;
-    padding-left:0.7vw;
-    padding-top:0.1vw;
-    float:right;
-    font-size:1.2vw;
-    color:white;
+/*------------------------------------------------*/
+/*Settings Screen*/
+#settingsscreen{
+    opacity:0;
 }
+    #settingsbox{
+        opacity:0;
+        position:relative;
+        width:40vw;
+        height:80vh;
+        left:30vw;
+        top:10vh;
+    }
+        #settingsbox paper-input{
+            display:block;
+            font-size:1vw;
+            width:20vw;
+            text-align:left;
+            margin-left:1.5vw;
+        }
+    #settingssave{
+        position:absolute;
+        bottom:1vw;
+        right:1vw;
+        font-size:1vw;
+    }
 /*------------------------------------------------*/
 /*Create*/
+.create{
+    position:absolute;
+    right:1vw;
+    bottom:1vw;
+    width:65px;
+    height:360px;
+}
 #createmenu{
-	position: absolute;
-	bottom:5vh;
-	right: 2.5vw;
+    position:absolute;
+    right:0.5vw;
+    bottom: 0vh;
 }
-#createmenu paper-fab{
-	width: 3.5vw;
-	height: 3.5vw;
-}
+    .createsmall{
+        opacity:0;
+        z-index: 5;
+    }
+    .createsmaller{
+        height: 40px;
+        width: 40px;
+        padding:8px;
+    }
         #document{
             background-color:#5677fc;
-			height: 3.5vw;
-			width: 3.5vw;
-			padding: .875vw;
         }
         #task{
             background-color:#259b24;
-			height: 3.5vw;
-			width: 3.5vw;
-			padding: .875vw;
         }
         #reminder{
             background-color:#FF9933;
-			height: 3.5vw;
-			width: 3.5vw;
-			padding: .875vw;
         }
         #email{
-        	background-color:#CC33FF;
-			height: 3.5vw;
-			width: 3.5vw;
-			padding: .875vw;
+            background-color:#CC33FF;
         }
         #group{
-            background-color:#33CCCC;
-			height: 3.5vw;
-			width: 3.5vw;
-			padding: .875vw;
-		}
+            background-color:#33CCCC; 
+        }
         #project{
-            background-color:#FF0066;
-			height: 3.5vw;
-			width: 3.5vw;
-			padding: .875vw;
-		}
+            background-color:#FF0066;   
+        }
         #taskwhole{
-			position: absolute;
+            position: absolute;
 			left: 0;
         }
         #reminderwhole{
-			position: absolute;
+            position: absolute;
 			left: 0;
         }
         #emailwhole{
-			position: absolute;
+            position: absolute;
 			left: 0;
         }
         #groupwhole{
-			position: absolute;
+            position: absolute;
 			left: 0;
-		}
+        }
         #projectwhole{
-			position: absolute;
+            position: absolute;
 			left: 0;
-		}
+        }
+
 #createcontainer{
     color:#fff;
     position:absolute;
-    right:2vw;
-    bottom:4vh;
+    right:0vw;
+    bottom:0vw;
 }
     #create{
-        height:4.25vw;
-        width:4.25vw;
-        padding:1.25vw;
-        transition:0.5s;
+        height:55px;
+        width:55px;
+        padding:16px;
+        transition:0.3s;
     }
     .create:hover #create{
         transform:rotate(90deg);
@@ -215,13 +231,10 @@ img{
     }
     .multipurpose paper-button{
         float:right;
-        display:block;
-        margin-right:3.5vw;
-        margin-top:5vh;
+        position:absolute;
+        right:1vw;
+        bottom:1vw;
     }
-/*------------------------------------------------*/
-/*Settings*/
-
 /*------------------------------------------------*/
 /*Header*/
 #header{
@@ -255,11 +268,16 @@ img{
     }
         .day core-tooltip{
             width:80%;
-            font-size:0.7vw;
+            font-size:1vw;
             color:white;
-            height:1vw;
+            height:1.5vw;
             margin-top:0.2vw;
+        }
+        .day core-tooltip p{
             border-radius:0.15vw;
+        }
+        #cd7{
+            border:none;
         }
     .date{
         width:100%;
@@ -329,7 +347,17 @@ img{
 .class .title{
     font-size:1.5vw;
 }
-
+.notification{
+    height:1.75vw;
+    width:1.75vw;
+    text-align:center;
+    box-sizing:border-box;
+    padding-left:0.7vw;
+    padding-top:0.1vw;
+    float:right;
+    font-size:1.2vw;
+    color:white;
+}
 /*------------------------------------------------*/
 /*Apps*/
 .app{
