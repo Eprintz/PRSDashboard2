@@ -9,13 +9,13 @@ $(document).ready(function(){
 //Login
 var notification = new Notification('Task', {
     body: 'EXAMPLE TASK IS AN EXAMPLE',
-    icon: '/Pictures/logolarge.png'
+    icon: '/Pictures/Icons/favicon-192x192.png'
 });
 /*----------------------------------------------------------------------*/
 /*Login Screen*/
 		if(username="Login"){
 			$("body").append
-			('<div id="loginscreen"></div><div id="loginbox"><div class="logintitle">Login</div></div>');
+			('<div id="loginscreen"class="screen"></div><div id="loginbox"class="box"><div class="logintitle">Login</div></div>');
 			$("#loginbox").append
 			('<form class="form"id="loginform"><paper-input label="Username" floatingLabel id="usernameinput"></paper-input><paper-input label="Password" id="passwordinput" floatingLabel ></paper-input><paper-button raised class="submit"id="loginsubmit">Login</paper-button></form>');
 			$("#loginbox").append
@@ -36,28 +36,78 @@ var notification = new Notification('Task', {
 			});
 		}
 $("#loginsubmit").click(function(){
-    $("#loginscreen").remove();
-    $("#loginbox").remove();
+    $("#loginscreen").animate({opacity:0},250);
+    $("#loginbox").animate({opacity:0},250);
+    setTimeout(function(){
+        $("#loginscreen").remove();
+         $("#loginbox").remove();
+    },250);
 });
-//Action Menus
-	$(".createsmall").css("opacity", "0");
+/*----------------------------------------------------------------------*/
+/*Setting Screen*/
+$("#settings").click(function(){
+    $("body").append('<div id="settingsscreen"class="screen"><div id="settingsbox"class="box"><paper-icon-button icon="close" class="close" id="settingsclose"></paper-icon-button><paper-input label="Period 1" id="p1name" floatingLabel inputValue="{{period1name}}"></paper-input><paper-input label="Period 2" id="p2name" floatingLabel inputValue="{{period2name}}"></paper-input><paper-input label="Period 3" id="p3name" floatingLabel inputValue="{{period3name}}"></paper-input><paper-input label="Period 4" id="p4name" floatingLabel inputValue="{{period4name}}"></paper-input><paper-input label="Period 5" id="p5name" floatingLabel inputValue="{{period5name}}"></paper-input><paper-input label="Period 6" id="p6name" floatingLabel inputValue="{{period6name}}"></paper-input><paper-input label="Period 7" id="p7name" floatingLabel inputValue="{{period7name}}"></paper-input><paper-input label="Period 8" id="p8name" floatingLabel inputValue="{{period8name}}"></paper-input><paper-button id="settingssave">Save</paper-button></div></div>');
+    $("#settingsscreen").animate({opacity:1},250);
+    $("#settingsbox").animate({opacity:1},250);
+    $("#settingsclose").click(function(){
+        $("#settingsscreen").animate({opacity:0},250);
+        $("#settingsbox").animate({opacity:0},250);
+        setTimeout(function(){
+            $("#settingsscreen").remove();
+        },250);
+    });
+     $("#settingssave").click(function(){
+        redotopbar();
+        $("#settingsscreen").animate({opacity:0},250);
+        $("#settingsbox").animate({opacity:0},250);
+        setTimeout(function(){
+            $("#settingsscreen").remove();
+        },250);
+     });
+    document.querySelector('#p1name').addEventListener('change',function(event) {
+        periods[0] = event.target.value;
+    });
+    document.querySelector('#p2name').addEventListener('change',function(event) {
+        periods[1] = event.target.value;
+    });
+    document.querySelector('#p3name').addEventListener('change',function(event) {
+        periods[2] = event.target.value;
+    });
+    document.querySelector('#p4name').addEventListener('change',function(event) {
+        periods[3] = event.target.value;
+    });
+    document.querySelector('#p5name').addEventListener('change',function(event) {
+        periods[4] = event.target.value;
+    });
+    document.querySelector('#p6name').addEventListener('change',function(event) {
+        periods[5] = event.target.value;
+    });
+    document.querySelector('#p7name').addEventListener('change',function(event) {
+        periods[6] = event.target.value;
+    });
+    document.querySelector('#p8name').addEventListener('change',function(event) {
+        periods[7] = event.target.value;
+    });
+});
+
+
+/*----------------------------------------------------------------------*/
+/*Action Menus*/
 $(".create").mouseenter(function(){
-	$(".createsmall").css("opacity", "1");
-	$("#documentwhole").animate({bottom: "8vh"});
-	$("#taskwhole").delay(100).animate({bottom: "16vh"});
-	$("#reminderwhole").delay(200).animate({bottom:"24vh"});
-	$("#emailwhole").delay(300).animate({bottom: "32vh"});
-	$("#groupwhole").delay(400).animate({bottom: "40vh"});
-	$("#projectwhole").delay(500).animate({bottom: "48vh"});
+    $("#documentwhole").animate({bottom: "70px",opacity:1},300);
+    $("#taskwhole").animate({bottom: "120px",opacity:1},300);
+    $("#reminderwhole").animate({bottom: "170px",opacity:1},300);
+    $("#emailwhole").animate({bottom: "220px",opacity:1},300);
+    $("#groupwhole").animate({bottom: "270px",opacity:1},300);
+    $("#projectwhole").animate({bottom: "320px",opacity:1},300);
 });
 $(".create").mouseleave(function(){
-	$("#documentwhole").delay(500).animate({bottom: "0"});
-	$("#taskwhole").delay(400).animate({bottom: "0"});
-	$("#reminderwhole").delay(300).animate({bottom: "0"});
-	$("#emailwhole").delay(200).animate({bottom: "0"});
-	$("#groupwhole").delay(100).animate({bottom: "0"});
-	$("#projectwhole").animate({bottom: "0"});
-	$(".createsmall").css("display", "inline-block");
+    $("#documentwhole").animate({bottom: "0",opacity:0});
+    $("#taskwhole").animate({bottom: "0",opacity:0});
+    $("#reminderwhole").animate({bottom: "0",opacity:0});
+    $("#emailwhole").animate({bottom: "0",opacity:0});;
+    $("#groupwhole").animate({bottom: "0",opacity:0});
+    $("#projectwhole").animate({bottom: "0",opacity:0});
 });
 /*----------------------------------------------------------------------*/
 /*Get Username and Password*/
@@ -124,31 +174,31 @@ document.querySelector('#passwordinput').addEventListener('change', function(eve
                 $("#n1").html(classnotifications[0]);
             }
         $("#n2").css("background-color",colors[1]);
-             if(classnotifications[0]==0){
+             if(classnotifications[1]==0){
                     $("#n2").css("display","none");   
             }
             else{
                 $("#n2").css("display","inline-bock");
-                $("#n2").html(classnotifications[0]);
+                $("#n2").html(classnotifications[1]);
             }
         $("#n3").css("background-color",colors[2]);
-            if(classnotifications[0]==0){
+            if(classnotifications[2]==0){
                 $("#n3").css("display","none");   
             }
             else{
                 $("#n3").css("display","inline-bock");
-                $("#n3").html(classnotifications[0]);
+                $("#n3").html(classnotifications[2]);
             }
         $("#n4").css("background-color",colors[3]);
-            if(classnotifications[0]==0){
+            if(classnotifications[3]==0){
                 $("#n4").css("display","none");   
             }
             else{
                 $("#n4").css("display","inline-bock");
-                $("#n4").html(classnotifications[0]);
+                $("#n4").html(classnotifications[3]);
             }
         $("#n5").css("background-color",colors[4]);
-            if(classnotifications[0]==0){
+            if(classnotifications[4]==0){
                 $("#n5").css("display","none");   
             }
             else{
@@ -156,7 +206,7 @@ document.querySelector('#passwordinput').addEventListener('change', function(eve
                 $("#n5").html(classnotifications[0]);
             }
         $("#n6").css("background-color",colors[5]);
-            if(classnotifications[0]==0){
+            if(classnotifications[5]==0){
                 $("#n6").css("display","none");   
             }
             else{
@@ -164,7 +214,7 @@ document.querySelector('#passwordinput').addEventListener('change', function(eve
                 $("#n6").html(classnotifications[0]);
             }
         $("#n7").css("background-color",colors[6]);
-            if(classnotifications[0]==0){
+            if(classnotifications[6]==0){
                 $("#n7").css("display","none");   
             }
             else{
@@ -172,7 +222,7 @@ document.querySelector('#passwordinput').addEventListener('change', function(eve
                 $("#n7").html(classnotifications[0]);
             }
         $("#n8").css("background-color",colors[7]);
-            if(classnotifications[0]==0){
+            if(classnotifications[7]==0){
                 $("#n8").css("display","none");   
             }
             else{
@@ -248,6 +298,12 @@ $("#task").click(function(){
             $("#taskcreation").remove();
         },320)
     });
+    $("#task").dblclick(function(){
+        $("#taskcreation").animate({marginBottom:"-45vh"},300);
+        setTimeout(function(){
+            $("#taskcreation").remove();
+        },320)
+    });
     var taskcreatename = "Task Name";
     var taskcreatedescription = "Task Description";
     document.querySelector('#taskcreatename').addEventListener('change',         function(event) {
@@ -259,17 +315,14 @@ document.querySelector('#taskcreatedescription').addEventListener('change', func
     $("#taskcreate").click(function(){
         var createdtaskclass = $("#taskclassselect").val();
         var createdtaskdate = $("#taskdayselect").val();
-        $("#cd"+createdtaskdate).append("<core-tooltip position='right'><p>"+taskcreatename+"</p><div tip>"+taskcreatedescription+"</div></core-tooltip>");                     $("#cd"+createdtaskdate+" p").css("background-color",colors[createdtaskclass]);
+        $("#cd"+createdtaskdate).append("<core-tooltip position='right'><p>"+taskcreatename+"</p><div tip>"+taskcreatedescription+"</div></core-tooltip>");                     
+        $("#cd"+createdtaskdate+" p").css("background-color",colors[createdtaskclass]);
         $("#taskcreation").animate({marginBottom:"-45vh"},300);
         setTimeout(function(){
             $("#taskcreation").remove();
         },320)
-    });
-    $("#task").dblclick(function(){
-        $("#taskcreation").animate({marginBottom:"-45vh"},300);
-        setTimeout(function(){
-            $("#taskcreation").remove();
-        },320)
+         classnotifications[2]=10;
+        redotopbar();
     });
 });
 
