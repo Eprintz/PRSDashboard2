@@ -2,26 +2,44 @@
     <html>
         <head>
             <title>PRS Dashboard</title>
-            <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon" />
+            <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/Pictures/Icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/Pictures/Icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/Pictures/Icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/Pictures/Icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/Pictures/Icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/Pictures/Icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/Pictures/Icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/Pictures/Icons/apple-touch-icon-180x180.png">
+<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/png" href="/Pictures/Icons/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/Pictures/Icons/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/Pictures/Icons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/Pictures/Icons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/Pictures/Icons/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="msapplication-TileImage" content="/Pictures/Icons/mstile-144x144.png">
+            <link href="components/bower_components/polymer/polymer.html" rel="import">
 <link href="components/bower_components/core-collapse/core-collapse.html" rel="import">
 <link href="components/bower_components/core-menu/core-menu.html" rel="import">
 <link href="components/bower_components/paper-dropdown/paper-dropdown.html" rel="import">
 <link href="components/bower_components/paper-item/paper-item.html" rel="import">
 <link href="components/bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
-<link href="components/bower_components/paper-icon-button/paper-icon-button.html" rel="import">
-<link href="components/bower_components/paper-fab/paper-fab.html" rel="import">
-<link href="components/bower_components/core-dropdown/core-dropdown.html" rel="import">
- <link href="components/bower_components/core-tooltip/core-tooltip.html" rel="import">
-<link href="components/bower_components/core-toolbar/core-toolbar.html" rel="import">
-<link href="components/bower_components/font-roboto/roboto.html" rel="import">
-    <link href="components/bower_components/paper-shadow/paper-shadow.html" rel="import">
-    <link href="components/bower_components/paper-input/paper-input.html" rel="import">
+<link href="/components/bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+<link href="/components/bower_components/paper-fab/paper-fab.html" rel="import">
+<link href="/components/bower_components/core-dropdown/core-dropdown.html" rel="import">
+ <link href="/components/bower_components/core-tooltip/core-tooltip.html" rel="import">
+<link href="/components/bower_components/core-toolbar/core-toolbar.html" rel="import">
+<link href="/components/bower_components/font-roboto/roboto.html" rel="import">
+    <link href="/components/bower_components/paper-shadow/paper-shadow.html" rel="import">
+<link href="/components/bower_components/paper-shadow/paper-shadow.css" rel="import">
+    <link href="/components/bower_components/paper-input/paper-input.html" rel="import">
   <link href="/components/bower_components/paper-button/paper-button.html" rel="import">
             <script src="/Plugins/jquery-2.1.1.min.js"></script>
             <script src="database.js"></script>
             <script src="script.js"></script>
             <link rel="stylesheet"href="style.css">
-            <script src="calculator.js"></script>
         </head>
         <body>
 <!--Header-->
@@ -38,30 +56,30 @@
         <paper-icon-button icon="apps"></paper-icon-button>
     </core-tooltip>
     <core-tooltip label="Settings">
-        <paper-icon-button icon="settings"></paper-icon-button>
+        <paper-icon-button icon="settings"id="settings"></paper-icon-button>
     </core-tooltip>
 </core-toolbar>
 </paper-shadow>
 <!--Action Icons-->
 <div class="create">
 <div id="createmenu">
-    <core-tooltip label="Project" class="createsmall" id="projectwhole" position="left" noarrow>
-        <paper-fab mini icon="folder-shared" id="project"></paper-fab>
+    <core-tooltip label="Project"class="createsmall"id="projectwhole"position="left" noarrow>
+        <paper-fab mini icon="folder-shared"class="createsmaller"id="project"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Group" class="createsmall" id="groupwhole" position="left" noarrow>
-        <paper-fab mini icon="account-child" id="group"></paper-fab>
+    <core-tooltip label="Group"class="createsmall"id="groupwhole"position="left" noarrow>
+        <paper-fab mini icon="account-child"class="createsmaller"id="group"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Email" class="createsmall" id="emailwhole" position="left" noarrow>
-        <paper-fab mini icon="mail" id="email"></paper-fab>
+    <core-tooltip label="Email"class="createsmall"id="emailwhole"position="left" noarrow>
+        <paper-fab mini icon="mail"class="createsmaller"id="email"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Reminder" class="createsmall" id="reminderwhole" position="left" noarrow>
-        <paper-fab mini icon="alarm" id="reminder"></paper-fab>
+    <core-tooltip label="Reminder"class="createsmall"id="reminderwhole"position="left" noarrow>
+        <paper-fab mini icon="alarm"class="createsmaller"id="reminder"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Task" class="createsmall" id="taskwhole" position="left" noarrow>
-        <paper-fab mini icon="check" id="task"></paper-fab>
+    <core-tooltip label="Task"class="createsmall"id="taskwhole"position="left" noarrow>
+        <paper-fab mini icon="check"class="createsmaller"id="task"></paper-fab>
     </core-tooltip>
-    <core-tooltip label="Document" class="createsmall" id="documentwhole" position="left" noarrow>
-        <paper-fab mini icon="description" id="document"></paper-fab>
+     <core-tooltip label="Document"class="createsmall"id="documentwhole"position="left" noarrow>
+        <paper-fab mini icon="description"class="createsmaller"id="document"></paper-fab>
     </core-tooltip>
 </div>
 <core-tooltip label="More"id="createcontainer" position="left" noarrow>
