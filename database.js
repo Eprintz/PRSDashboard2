@@ -103,12 +103,12 @@ $(".create").mouseenter(function(){
     $("#projectwhole").delay(250).animate({bottom: "320px"},300);
 });
 $(".create").mouseleave(function(){
-    $("#documentwhole").delay(250).animate({bottom: "0"});
-    $("#taskwhole").delay(200).animate({bottom: "0"});
-    $("#reminderwhole").delay(150).animate({bottom: "0"});
-    $("#emailwhole").delay(100).animate({bottom: "0"});;
-    $("#groupwhole").delay(50).animate({bottom: "0"});
-    $("#projectwhole").animate({bottom: "0"});
+    $("#documentwhole").delay(250).animate({bottom: "0"},300);
+    $("#taskwhole").delay(200).animate({bottom: "0"},300);
+    $("#reminderwhole").delay(150).animate({bottom: "0"},300);
+    $("#emailwhole").delay(100).animate({bottom: "0"},300);;
+    $("#groupwhole").delay(50).animate({bottom: "0"},300);
+    $("#projectwhole").animate({bottom: "0"},300);
 });
 /*----------------------------------------------------------------------*/
 /*Get Username and Password*/
