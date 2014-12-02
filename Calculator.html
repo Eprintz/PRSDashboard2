@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Title>Calculator</Title>
+		<link rel="stylesheet" href="Calculator.css">
+		<link rel="import" href="components/bower_components/paper-input/paper-input.html">
+		<link rel="import" href="components/bower_components/paper-button/paper-button.html">
+		<link rel="import" href="components/bower_components/font-roboto/roboto.html">
+		<link rel="icon" href="http://www.sucaijiayuan.com/uploads/allimg/130115/2-130115212140.png">
+		<script>
+		$(document).ready(function(){
+			$("#1").onclick(function(){
+				document.calculator.text.value+='1';
+			});
+			$("#2").onclick(function(){
+				document.calculator.text.value += "2";
+			});
+			$("#3").onclick(function(){
+				document.calculator.text.value += "3";
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div id="calculator">
+			<input type=text id="input" NAME="text" VALUE="">
+		<br>
+		<p></p>
+		<paper-button id="1">1</paper-button>
+		<paper-button id="2">2</paper-button>
+		<paper-button id="3">3</paper-button>
+		</div>
+	</body>
+</html>

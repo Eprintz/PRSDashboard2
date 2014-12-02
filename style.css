@@ -121,9 +121,9 @@ img{
         opacity:0;
     }
     .createsmaller{
-        height: 40px;
-        width: 40px;
-        padding:8px;
+        height: 3vw;
+        width: 3vw;
+        padding:.6vw;
     }
         #document{
             background-color:#5677fc;

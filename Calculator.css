@@ -1,0 +1,25 @@
+*{
+	font-family: "RobotoDraft";
+}
+paper-button{
+	width: 4.5vw;
+}
+paper-button:hover{
+	background-color: #EDEDED;
+}
+input{
+	width: 21.78vw;
+	border: 1px solid black;
+	height: 4vh;
+	border-top-left-radius: .5em;
+	border-top-right-radius: .5em;
+	font-size: 3vh;
+	text-align: right;
+	background-color: ;
+}
+#calculator{
+		border: 1px solid grey;
+		width: 22.1vw;
+		padding: .13vw;
+		border-radius: .75em;
+}
