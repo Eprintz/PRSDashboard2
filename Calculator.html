@@ -8,27 +8,91 @@
 		<link rel="import" href="components/bower_components/font-roboto/roboto.html">
 		<link rel="icon" href="http://www.sucaijiayuan.com/uploads/allimg/130115/2-130115212140.png">
 		<script>
-		$(document).ready(function(){
-			$("#1").onclick(function(){
-				document.calculator.text.value+='1';
-			});
-			$("#2").onclick(function(){
-				document.calculator.text.value += "2";
-			});
-			$("#3").onclick(function(){
-				document.calculator.text.value += "3";
-			});
-		});
+		    function getPi() 
+                {return Math.PI}
+
+                function getRandom() 
+                {return Math.random()}
+
+                function change()
+                {
+                    var temp = document.getElementById('input').value;
+
+                    if (temp.substring(0,1) == "-") 
+                    {document.calculator.list.value = "";
+                     document.calculator.text.value = 0 - document.calculator.text.value * 1}
+
+                    if (temp.substring(0,1) != "-") 
+                    {document.calculator.list.value ="";
+                     document.calculator.text.value = "-" +    temp.substring(0,temp.length)}
+                }
+
+                function recip(x)
+                {document.calculator.text.value = (1/(x))}
+                function raisePower(x)
+                {
+
+                    var y = 0
+
+                    y = prompt("What is the exponent?", "")
+
+                    document.calculator.text.value = Math.pow(x,y)
+                }
+					$(document).ready(function(){
+						$("#X").click(function(){
+							$("#X").css({"background-color","black"});
+						});
+					});
 		</script>
 	</head>
 	<body>
 		<div id="calculator">
-			<input type=text id="input" NAME="text" VALUE="">
-		<br>
-		<p></p>
-		<paper-button id="1">1</paper-button>
-		<paper-button id="2">2</paper-button>
-		<paper-button id="3">3</paper-button>
+			<FORM NAME="calculator" class="clac">
+				<INPUT NAME="list" TYPE=HIDDEN class="clac">
+				<INPUT TYPE=TEXT id="input" NAME="text" VALUE=""
+		><img id="X" src="http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/256/cross-24-256.png">
+					<br>
+					<paper-button onClick="document.calculator.text.value+='('">(</paper-button>
+					<paper-button onClick="document.calculator.text.value+=')'">)</paper-button>
+					<paper-button onClick="change()">+/-</paper-button>
+					<paper-button id="long" onClick="document.calculator.text.value = document.calculator.text.value.substring(0,document.calculator.text.value.length*1 -1)">Del</paper-button>
+					
+					<paper-button id="end"
+onClick="document.calculator.text.value=''">AC</paper-button>
+				<br>
+					<paper-button onClick="document.calculator.text.value+= getPi()">π</paper-button>
+					<paper-button onClick="document.calculator.text.value= document.calculator.text.value * document.calculator.text.value">x²</paper-button>
+					<paper-button onClick="document.calculator.text.value= Math.sin(document.calculator.text.value*3.141592653589793/180)">sin</paper-button>
+					<paper-button onClick="document.calculator.text.value+='1'">1</paper-button>
+					<paper-button onClick="document.calculator.text.value+='2'">2</paper-button>
+					<paper-button onClick="document.calculator.text.value+='3'">3</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='*'">x</paper-button>
+					<br>
+					<paper-button onClick="document.calculator.text.value+='E'">Exp.</paper-button>
+					<paper-button onClick="raisePower(document.calculator.text.value)">x^y</paper-button>
+					<paper-button onClick="document.calculator.text.value=Math.cos(document.calculator.text.value*3.141592653589793/180)">cos</paper-button>
+					<paper-button onClick="document.calculator.text.value+='4'">4</paper-button>
+					<paper-button onClick="document.calculator.text.value+='5'">5</paper-button>
+					<paper-button onClick="document.calculator.text.value+='6'">6</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='/'">/</paper-button>
+				<br>
+					<paper-button onClick="document.calculator.text.value=Math.round(document.calculator.text.value)">Round</paper-button>
+					<paper-button onClick="document.calculator.text.value=Math.sqrt(document.calculator.text.value)">√</paper-button>
+					<paper-button onClick="document.calculator.text.value=Math.tan(document.calculator.text.value*3.141592653589793/180)">tan</paper-button>
+					<paper-button onClick="document.calculator.text.value+='7'">7</paper-button>
+					<paper-button onClick="document.calculator.text.value+='8'">8</paper-button>
+					<paper-button onClick="document.calculator.text.value+='9'">9</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='-'">-</paper-button>
+					<br>
+					<paper-button onClick="document.calculator.text.value=Math.abs(document.calculator.text.value)">|x|</paper-button>
+					<paper-button onClick="recip(document.calculator.text.value)">1/x</paper-button>
+					<paper-button onClick="document.calculator.text.value = getRandom()">Rand</paper-button>
+					<paper-button id="long" onClick="document.calculator.text.value+='0'">0</paper-button>
+					<paper-button onClick="document.calculator.text.value+='.'">.</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='+'">+</paper-button>
+					<br>
+					<paper-button id="end" onClick="document.calculator.text.value=eval(document.calculator.text.value)">=</paper-button>
+				</FORM>
 		</div>
 	</body>
 </html>

@@ -1,25 +1,41 @@
 *{
 	font-family: "RobotoDraft";
 }
-paper-button{
-	width: 4.5vw;
-}
 paper-button:hover{
 	background-color: #EDEDED;
 }
-input{
-	width: 21.78vw;
+#input{
+	width: 51.4vw;
 	border: 1px solid black;
 	height: 4vh;
 	border-top-left-radius: .5em;
 	border-top-right-radius: .5em;
 	font-size: 3vh;
 	text-align: right;
-	background-color: ;
+}
+#X{
+	height: 1.5vw;
+	width: 1.5vw;
+	cursor: pointer;
+	position: absolute;
+	z-index: 2;
+	top: 2vh;
+	left: 1vw; 
+}
+paper-button{
+	width: 4.5vw;
+	height: 5.5vh;
+}
+#long{
+	width: 13.9vw;
+}
+#end{
+	float: right;
+	display: block;
+	height: 5vh;
+	word-spacing: 0;
+	
 }
 #calculator{
-		border: 1px solid grey;
-		width: 22.1vw;
-		padding: .13vw;
-		border-radius: .75em;
+	width: 51.7vw;
 }
