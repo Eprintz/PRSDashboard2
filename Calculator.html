@@ -58,6 +58,9 @@
 onClick="document.calculator.text.value=''">AC
 					<paper-ripple fit></paper-ripple>
 					</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='*'">x
+					<paper-ripple fit></paper-ripple>
+					</paper-button>
 				<br>
 					<paper-button onClick="document.calculator.text.value+= getPi()">π</paper-button>
 					<paper-button onClick="document.calculator.text.value= document.calculator.text.value * document.calculator.text.value">x²</paper-button>
@@ -65,7 +68,7 @@ onClick="document.calculator.text.value=''">AC
 					<paper-button onClick="document.calculator.text.value+='1'">1</paper-button>
 					<paper-button onClick="document.calculator.text.value+='2'">2</paper-button>
 					<paper-button onClick="document.calculator.text.value+='3'">3</paper-button>
-					<paper-button id="end" onClick="document.calculator.text.value+='*'">x
+					<paper-button id="end" onClick="document.calculator.text.value+='/'">/
 					<paper-ripple fit></paper-ripple>
 					</paper-button>
 					<br>
@@ -75,7 +78,7 @@ onClick="document.calculator.text.value=''">AC
 					<paper-button onClick="document.calculator.text.value+='4'">4</paper-button>
 					<paper-button onClick="document.calculator.text.value+='5'">5</paper-button>
 					<paper-button onClick="document.calculator.text.value+='6'">6</paper-button>
-					<paper-button id="end" onClick="document.calculator.text.value+='/'">/
+					<paper-button id="end" onClick="document.calculator.text.value+='-'">-
 					<paper-ripple fit></paper-ripple>
 					</paper-button>
 				<br>
@@ -85,7 +88,7 @@ onClick="document.calculator.text.value=''">AC
 					<paper-button onClick="document.calculator.text.value+='7'">7</paper-button>
 					<paper-button onClick="document.calculator.text.value+='8'">8</paper-button>
 					<paper-button onClick="document.calculator.text.value+='9'">9</paper-button>
-					<paper-button id="end" onClick="document.calculator.text.value+='-'">-
+					<paper-button id="end" onClick="document.calculator.text.value+='+'">+
 					<paper-ripple fit></paper-ripple>
 					</paper-button>
 					<br>
@@ -94,10 +97,6 @@ onClick="document.calculator.text.value=''">AC
 					<paper-button onClick="document.calculator.text.value = getRandom()">Rand</paper-button>
 					<paper-button id="long" onClick="document.calculator.text.value+='0'">0</paper-button>
 					<paper-button onClick="document.calculator.text.value+='.'">.</paper-button>
-					<paper-button id="end" onClick="document.calculator.text.value+='+'">+
-					<paper-ripple fit></paper-ripple>
-					</paper-button>
-					<br>
 					<paper-button id="end" onClick="document.calculator.text.value=eval(document.calculator.text.value)">=
 					<paper-ripple fit></paper-ripple>
 					</paper-button>

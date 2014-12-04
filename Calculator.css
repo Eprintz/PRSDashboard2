@@ -31,20 +31,12 @@ paper-button:hover{
 paper-button{
 	width: 4.5vw;
 	height: 5.5vh;
-	display: inline-block;
-	word-spacing: 0;
 }
 #long{
 	width: 13.9vw;
 }
 #end{
-	float: right;
-	display: block;
-	height: 4vh;
-	font-size: smaller;
-}
-#calculator{
-	width: 51.7vw;
+	color: #4285f4;
 }
 paper-ripple{
 	overflow: hidden;
