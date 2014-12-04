@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" href="/Pictures/Icons/favicon-32x32.png" sizes="32x32">
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="msapplication-TileImage" content="/Pictures/Icons/mstile-144x144.png">
-            <link href="components/bower_components/polymer/polymer.html" rel="import">
+           	<link href="components/bower_components/polymer/polymer.html" rel="import">
 <link href="components/bower_components/core-collapse/core-collapse.html" rel="import">
 <link href="components/bower_components/core-menu/core-menu.html" rel="import">
 <link href="components/bower_components/paper-dropdown/paper-dropdown.html" rel="import">
@@ -36,6 +36,7 @@
 <link href="/components/bower_components/paper-shadow/paper-shadow.css" rel="import">
     <link href="/components/bower_components/paper-input/paper-input.html" rel="import">
   <link href="/components/bower_components/paper-button/paper-button.html" rel="import">
+<link href="components/bower_components/paper-ripple/index.html" rel="import">
             <script src="/Plugins/jquery-2.1.1.min.js"></script>
             <script src="database.js"></script>
             <script src="script.js"></script>
@@ -197,6 +198,66 @@
     </div>
 <!--Apps Section-->
         <div id="appssection">
+			<!--Calculator-->
+			<div id="calculator">
+			<FORM NAME="calculator" class="clac">
+				<INPUT NAME="list" TYPE=HIDDEN class="clac">
+				<INPUT TYPE=TEXT id="input" NAME="text" VALUE=""
+		>
+					<br>
+					<paper-button onClick="document.calculator.text.value+='('">(</paper-button>
+					<paper-button onClick="document.calculator.text.value+=')'">)</paper-button>
+					<paper-button onClick="change()">+/-</paper-button>
+					<paper-button id="long" onClick="document.calculator.text.value = document.calculator.text.value.substring(0,document.calculator.text.value.length*1 -1)">Del</paper-button>
+					
+					<paper-button id="end"
+onClick="document.calculator.text.value=''">AC
+					<paper-ripple fit></paper-ripple>
+					</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='*'">x
+					<paper-ripple fit></paper-ripple>
+					</paper-button>
+				<br>
+					<paper-button onClick="document.calculator.text.value+= getPi()">π</paper-button>
+					<paper-button onClick="document.calculator.text.value= document.calculator.text.value * document.calculator.text.value">x²</paper-button>
+					<paper-button onClick="document.calculator.text.value= Math.sin(document.calculator.text.value*3.141592653589793/180)">sin</paper-button>
+					<paper-button onClick="document.calculator.text.value+='1'">1</paper-button>
+					<paper-button onClick="document.calculator.text.value+='2'">2</paper-button>
+					<paper-button onClick="document.calculator.text.value+='3'">3</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='/'">/
+					<paper-ripple fit></paper-ripple>
+					</paper-button>
+					<br>
+					<paper-button onClick="document.calculator.text.value+='E'">Exp.</paper-button>
+					<paper-button onClick="raisePower(document.calculator.text.value)">x^y</paper-button>
+					<paper-button onClick="document.calculator.text.value=Math.cos(document.calculator.text.value*3.141592653589793/180)">cos</paper-button>
+					<paper-button onClick="document.calculator.text.value+='4'">4</paper-button>
+					<paper-button onClick="document.calculator.text.value+='5'">5</paper-button>
+					<paper-button onClick="document.calculator.text.value+='6'">6</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='-'">-
+					<paper-ripple fit></paper-ripple>
+					</paper-button>
+				<br>
+					<paper-button onClick="document.calculator.text.value=Math.round(document.calculator.text.value)">Round</paper-button>
+					<paper-button onClick="document.calculator.text.value=Math.sqrt(document.calculator.text.value)">√</paper-button>
+					<paper-button onClick="document.calculator.text.value=Math.tan(document.calculator.text.value*3.141592653589793/180)">tan</paper-button>
+					<paper-button onClick="document.calculator.text.value+='7'">7</paper-button>
+					<paper-button onClick="document.calculator.text.value+='8'">8</paper-button>
+					<paper-button onClick="document.calculator.text.value+='9'">9</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value+='+'">+
+					<paper-ripple fit></paper-ripple>
+					</paper-button>
+					<br>
+					<paper-button onClick="document.calculator.text.value=Math.abs(document.calculator.text.value)">|x|</paper-button>
+					<paper-button onClick="recip(document.calculator.text.value)">1/x</paper-button>
+					<paper-button onClick="document.calculator.text.value = getRandom()">Rand</paper-button>
+					<paper-button id="long" onClick="document.calculator.text.value+='0'">0</paper-button>
+					<paper-button onClick="document.calculator.text.value+='.'">.</paper-button>
+					<paper-button id="end" onClick="document.calculator.text.value=eval(document.calculator.text.value)">=
+					<paper-ripple fit></paper-ripple>
+					</paper-button>
+				</FORM>
+		</div>
         </div>
     </div>
 </body>

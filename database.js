@@ -373,3 +373,34 @@ document.querySelector('#taskcreatedescription').addEventListener('change', func
         $("body").removeClass("night");
     }
 });
+/*----------------------------------------------------------------*/
+function getPi() 
+                {return Math.PI}
+
+                function getRandom() 
+                {return Math.random()}
+
+                function change()
+                {
+                    var temp = document.getElementById('input').value;
+
+                    if (temp.substring(0,1) == "-") 
+                    {document.calculator.list.value = "";
+                     document.getElementById("input").value = 0 - document.calculator.text.value * 1}
+
+                    if (temp.substring(0,1) != "-") 
+                    {document.calculator.list.value ="";
+                     document.getElementById("input").value = "-" +    temp.substring(0,temp.length)}
+                }
+
+                function recip(x)
+                {document.calculator.text.value = (1/(x))}
+                function raisePower(x)
+                {
+
+                    var y = 0
+
+                    y = prompt("What is the exponent?", "")
+
+                    document.calculator.text.value = Math.pow(x,y)
+                }

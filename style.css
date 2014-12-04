@@ -371,79 +371,37 @@ img{
 }
 /*------------------------------------------------*/
 /*Calculator*/
-form input{
-    border: 0.09em solid white;
-    margin: 0;
+#calculator paper-button:hover{
+	background-color: #EDEDED;
 }
-#number{
-    background-color: #E0E0E0;
-    width: 2.55vw;
-    height: 3vh;
-    cursor: pointer;
+#calculator #input{
+	width: 51.4vw;
+	border: 1px solid black;
+	height: 4vh;
+	border-top-left-radius: .5em;
+	border-top-right-radius: .5em;
+	font-size: 3vh;
+	text-align: right;
 }
-#toprow{
-    background-color: #C9C9C9;
-    width: 2.55vw;
-    height: 3vh;
-    display: inline-block;
-    cursor: pointer;
+#calculator paper-button{
+	width: 4.5vw;
+	height: 5.5vh;
+	font-size: 1.2vw;
 }
-#zero{
-    background-color: #E0E0E0;
-    word-spacing: 0;
-    width: 5.4vw;
-    height: 3vh;
-    cursor: pointer;
+#long{
+	width: 26vw;
 }
-#operator{
-    background-color: #3A95F7;
-    word-spacing: 0;
-    width: 2.55vw;
-    height: 3vh;
-    cursor: pointer;
+#end{
+	color: #4285f4;
 }
-#input{
-    background-color: #3A3B3B;
-    opacity: .5;
-    width: 19.7vw;
-    height: 3vh;
-    border: 1px solid grey;
-    color: white;
+paper-ripple{
+	overflow: hidden;
+	z-index: -1;
+	height: 4vh;
+}
+#end::shadow paper-ripple{
+	color: #4285f4;
 }
 #calculator{
-    border: 1px solid black;
-    width: 20.02vw;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    bottom: 50vh;
-    height: 20.6vh;
-}
- #left{
-     background-color: #C9C9C9;
-     width: 2.55vw;
-     height: 3vh;
-     text-align: center;
-     cursor: pointer;
- }
-#Bksp{
-    background-color: #C9C9C9;
-    width: 5.41vw;
-    height: 3vh;
-    text-align: center;
-    cursor: pointer;
-}
-.none{
-    display: none;
-}
-#X{
-    height: 3vh;
-    position: relative;
-    left: 10.1vw;
-    background-color: #EDEDED;
-    border-radius: 100%;
-    cursor: pointer;
-    bottom: 21.5vh;
-    /*display: none;*/
+	display: none;
 }

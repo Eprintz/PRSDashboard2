@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="Calculator.css">
 		<link rel="import" href="components/bower_components/paper-input/paper-input.html">
 		<link rel="import" href="components/bower_components/paper-button/paper-button.html">
-		<link rel="impot" href="components/bower_components/paper-ripple/index.html">
+		<link rel="import" href="components/bower_components/paper-ripple/index.html">
 		<link rel="import" href="components/bower_components/font-roboto/roboto.html">
 		<link rel="icon" href="http://www.sucaijiayuan.com/uploads/allimg/130115/2-130115212140.png">
 		<link rel="import" href="components/bower_components/paper-shadow/index.html">
@@ -107,10 +107,10 @@ onClick="document.calculator.text.value=''">AC
 *{
 	font-family: "RobotoDraft";
 }
-paper-button:hover{
+#calculator paper-button:hover{
 	background-color: #EDEDED;
 }
-#input{
+#calculator #input{
 	width: 51.4vw;
 	border: 1px solid black;
 	height: 4vh;
@@ -119,13 +119,7 @@ paper-button:hover{
 	font-size: 3vh;
 	text-align: right;
 }
-#X:hover{
-	height: 3.5vw;
-	width: 3.5vw;
-	top: -.5vh;
-	left: .25vw;
-}
-paper-button{
+#calculator paper-button{
 	width: 4.5vw;
 	height: 5.5vh;
 	font-size: 1.2vw;
