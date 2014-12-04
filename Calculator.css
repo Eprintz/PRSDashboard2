@@ -25,7 +25,7 @@ paper-button:hover{
 #X:hover{
 	height: 3.5vw;
 	width: 3.5vw;
-	top: .5vh;
+	top: -.5vh;
 	left: .25vw;
 }
 paper-button{
