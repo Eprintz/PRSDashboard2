@@ -14,17 +14,25 @@ paper-button:hover{
 	text-align: right;
 }
 #X{
-	height: 1.5vw;
-	width: 1.5vw;
+	height: 3vw;
+	width: 3vw;
 	cursor: pointer;
 	position: absolute;
 	z-index: 2;
-	top: 2vh;
-	left: 1vw; 
+	top: 0vh;
+	left: .5vw; 
+}
+#X:hover{
+	height: 3.5vw;
+	width: 3.5vw;
+	top: .5vh;
+	left: .25vw;
 }
 paper-button{
 	width: 4.5vw;
 	height: 5.5vh;
+	display: inline-block;
+	word-spacing: 0;
 }
 #long{
 	width: 13.9vw;
@@ -32,10 +40,17 @@ paper-button{
 #end{
 	float: right;
 	display: block;
-	height: 5vh;
-	word-spacing: 0;
-	
+	height: 4vh;
+	font-size: smaller;
 }
 #calculator{
 	width: 51.7vw;
+}
+paper-ripple{
+	overflow: hidden;
+	z-index: -1;
+	height: 4vh;
+}
+#end::shadow paper-ripple{
+	color: #4285f4;
 }
