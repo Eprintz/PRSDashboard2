@@ -47,7 +47,7 @@
 			<FORM NAME="calculator" class="clac">
 				<INPUT NAME="list" TYPE=HIDDEN class="clac">
 				<INPUT TYPE=TEXT id="input" NAME="text" VALUE=""
-		><img id="X" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Close_icon.svg/512px-Close_icon.svg.png">
+		>
 					<br>
 					<paper-button onClick="document.calculator.text.value+='('">(</paper-button>
 					<paper-button onClick="document.calculator.text.value+=')'">)</paper-button>
@@ -103,4 +103,44 @@ onClick="document.calculator.text.value=''">AC
 				</FORM>
 		</div>
 	</body>
+			<style>
+			*{
+	font-family: "RobotoDraft";
+}
+paper-button:hover{
+	background-color: #EDEDED;
+}
+#input{
+	width: 51.4vw;
+	border: 1px solid black;
+	height: 4vh;
+	border-top-left-radius: .5em;
+	border-top-right-radius: .5em;
+	font-size: 3vh;
+	text-align: right;
+}
+#X:hover{
+	height: 3.5vw;
+	width: 3.5vw;
+	top: -.5vh;
+	left: .25vw;
+}
+paper-button{
+	width: 4.5vw;
+	height: 5.5vh;
+}
+#long{
+	width: 13.9vw;
+}
+#end{
+	color: #4285f4;
+}
+paper-ripple{
+	overflow: hidden;
+	z-index: -1;
+	height: 4vh;
+}
+#end::shadow paper-ripple{
+	color: #4285f4;
+			</style>
 </html>
