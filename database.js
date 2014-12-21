@@ -366,13 +366,28 @@ document.querySelector('#taskcreatedescription').addEventListener('change', func
             redotopbar();
         });
     });
+/*----------------------------------------------------------------*/
+/*Apps*/
+	var calcOn = 0;
+	if(calcOn == 0){
+	$("#appButton").click(function(){
+		$("#calculator").show();
+		calcOn = 1;
+	});
+	}
+	else{
+		$("#appButton").click(function(){
+		$("#calculator").hide();
+		calcOn = 0;
+	});
+	}
+});
     if(Number(date.getHours())<0){
         $("body").addClass("night");
-    }
+	}
     else{
         $("body").removeClass("night");
-    }
-});
+	}
 /*----------------------------------------------------------------*/
 function getPi() 
                 {return Math.PI}
